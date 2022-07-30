@@ -1,0 +1,28 @@
+/* fade_OutUp ANIMATION */
+
+@-webkit-keyframes fade_OutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes fade_OutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+.fade_OutUp {
+  -webkit-animation-name: fade_OutUp;
+  animation-name: fade_OutUp;
+}

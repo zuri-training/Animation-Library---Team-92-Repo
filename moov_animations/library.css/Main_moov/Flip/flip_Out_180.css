@@ -1,0 +1,47 @@
+/* flip_Out_180 ANIMATION */
+@-webkit-keyframes flip_Out_180 {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+@keyframes flip_Out_180 {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+.flip_Out_180 {
+  -webkit-animation-duration: calc(1s * 0.75);
+  animation-duration: calc(1s * 0.75);
+  -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flip_Out_180;
+  animation-name: flip_Out_180;
+}

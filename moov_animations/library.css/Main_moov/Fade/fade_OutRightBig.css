@@ -1,0 +1,17 @@
+/* fade_OutRightBig ANIMATION */
+
+@keyframes fade_OutRightBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+.fade_OutRightBig {
+  -webkit-animation-name: fade_OutRightBig;
+  animation-name: fade_OutRightBig;
+}

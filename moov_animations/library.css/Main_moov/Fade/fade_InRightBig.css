@@ -1,0 +1,19 @@
+/*fade_InRightBig ANIMATION  */
+
+@keyframes fade_InRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fade_InRightBig {
+  -webkit-animation-name: fade_InRightBig;
+  animation-name: fade_InRightBig;
+}

@@ -1,0 +1,24 @@
+/* fade_In ANIMATION */
+
+@-webkit-keyframes fade_In {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade_In {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+fade_In {
+  -webkit-animation-name: fade_In;
+  animation-name: fade_In;
+}

@@ -1,0 +1,24 @@
+/*fade_Out ANIMATION  */
+
+@-webkit-keyframes fade_Out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade_Out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+.fade_Out {
+  -webkit-animation-name: fade_Out;
+  animation-name: fade_Out;
+}
