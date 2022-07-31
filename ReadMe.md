@@ -38,7 +38,8 @@ you can check for more usage examples on the [website](https://tallman98.github.
 ## Contribution
  If you want to contribute to this project,a pull request is the way to go and make sure to use standalized class-names.
 
-**You can view more about the Moov documentation on the [website](https://tallman98.github.io/Moov-Product/)** - [ ] uncompleted
+**You can view more about the Moov documentation on the [website](https://tallman98.github.io/Moov-Product/)** 
+ - [ ]  uncompleted 
 
 
 
@@ -54,8 +55,8 @@ Authenticated User:
     6. Give interactive interface to generate the right combination of code to use 
     7. Interactive Documentation
     8. Allow user save data and come back to download
-    
-   - [ ]uncompleted
+     - [ ]  uncompleted 
+
     
 Unauthenticated User:
 
