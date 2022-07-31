@@ -10,7 +10,7 @@ Download the [zip folder]():
 
 **CSS FILE:**
 
-`<link rel="stylesheet" href="path/to/do-slide/dist/do-slide.min.css">`
+`<link rel="stylesheet" href="path/moov-animate.min.css">`
 
 **HTML STRUCTURE:**
 
