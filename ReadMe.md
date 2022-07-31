@@ -20,7 +20,8 @@ Download the [zip folder]():
         <div>Section 2</div>
         <div>Section 3</div>
     </div>
-</div>```
+</div>
+```
 
 ## Installation
 
