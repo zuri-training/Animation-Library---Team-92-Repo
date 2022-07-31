@@ -36,8 +36,9 @@ pull request is the way to go and make sure to use standalized class-names.
 
 **You can view more about the Moov documentation on the [website](https://tallman98.github.io/Moov-Product/)
 
-# Web App Features:
-**Authenticated User**
+# Web App Features
+
+## Authenticated User:
      Full access to the platform
      Allow users download library
     **.** Allows users embed in their code (either by import, embed, or package manager installation)
@@ -47,7 +48,8 @@ pull request is the way to go and make sure to use standalized class-names.
     **.** Interactive Documentation
     **.** Allow user save data and come back to download
     
-**Unauthenticated User**
+## Unauthenticated User
+
     **.** Visit the platform to view basic information about it
     **.** View and Interact with the documentation
     **.** Register to view more details
