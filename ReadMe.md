@@ -45,6 +45,7 @@ you can check for more usage examples on the [website](https://tallman98.github.
 ## Web App Features
 
 Authenticated User:
+
     1.Full access to the platform
     2. Allow users download library
     3. Allows users embed in their code (either by import, embed, or package manager installation)
@@ -54,7 +55,7 @@ Authenticated User:
     7. Interactive Documentation
     8. Allow user save data and come back to download
     
-Unauthenticated User
+Unauthenticated User:
 
     1. Visit the platform to view basic information about it
     2. View and Interact with the documentation
@@ -63,7 +64,9 @@ Unauthenticated User
 
 
 
-## Team
+## Team:
+
+
         Adesewa Adeboye - Product Design
         Charles - Product Design
         Prosper - Product Design
