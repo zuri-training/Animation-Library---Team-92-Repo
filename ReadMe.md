@@ -39,7 +39,7 @@ pull request is the way to go and make sure to use standalized class-names.
 # Web App Features
 
 ## Authenticated User:
-     Full access to the platform
+     (*)Full access to the platform
      Allow users download library
     **.** Allows users embed in their code (either by import, embed, or package manager installation)
     **.** The Library should allow certain animations like - move_up, move_down, move_left, blink, bounce and fade (you can add more)
