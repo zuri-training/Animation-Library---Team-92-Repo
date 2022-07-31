@@ -23,6 +23,12 @@ Download the [zip folder]():
 </div>
 ```
 
+## Example
+This basic code is to appply a bouceIn animation:
+```
+<div class="bounceIn"></div>
+```
+
 ## Installation
 
 **Install the project into 
