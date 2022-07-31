@@ -32,13 +32,13 @@ To add a glow animation;
 ```
 <div class="moov-glow"></div>
 ```
-you can check for more usage examples on the [website](https://tallman98.github.io/Moov-Product/).
+you can check for more usage examples on the [website](https://tallman98.github.io/Moov-Product/).[ ]uncompleted
 
 
 ## Contribution
  If you want to contribute to this project,a pull request is the way to go and make sure to use standalized class-names.
 
-**You can view more about the Moov documentation on the [website](https://tallman98.github.io/Moov-Product/)**
+**You can view more about the Moov documentation on the [website](https://tallman98.github.io/Moov-Product/)** [ ] uncompleted
 
 
 
@@ -55,13 +55,15 @@ Authenticated User:
     7. Interactive Documentation
     8. Allow user save data and come back to download
     
+    [ ]uncompleted
+    
 Unauthenticated User:
 
     1. Visit the platform to view basic information about it
     2. View and Interact with the documentation
     3. Register to view more details
     4. No access to use until registered
-
+    [ ]  uncompleted 
 
 
 ## Team:
