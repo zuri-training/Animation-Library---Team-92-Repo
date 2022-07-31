@@ -36,7 +36,7 @@ you can check for more usage examples on the [website](https://tallman98.github.
 
 
 ## Contribution
- Pull request is the way to go and make sure to use standalized class-names.
+ If you want to contribute to this project,a pull request is the way to go and make sure to use standalized class-names.
 
 **You can view more about the Moov documentation on the [website](https://tallman98.github.io/Moov-Product/)**
 
