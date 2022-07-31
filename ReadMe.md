@@ -36,10 +36,10 @@ pull request is the way to go and make sure to use standalized class-names.
 
 **You can view more about the Moov documentation on the [website](https://tallman98.github.io/Moov-Product/)
 
-## Web App Features:
+# Web App Features:
 **.Authenticated User**
-    **.** Full access to the platform
-    **.** Allow users download library
+     Full access to the platform
+     Allow users download library
     **.** Allows users embed in their code (either by import, embed, or package manager installation)
     **.** The Library should allow certain animations like - move_up, move_down, move_left, blink, bounce and fade (you can add more)
     **.** Show usage example to users
@@ -54,7 +54,7 @@ pull request is the way to go and make sure to use standalized class-names.
     **.** No access to use until registered
 
 # Team
-       **.** Adesewa Adeboye - Product Design
+       (*)Adesewa Adeboye - Product Design
        **.** Charles - Product Design
        **.** Prosper - Product Design
        **.** Hillz - Product Design
