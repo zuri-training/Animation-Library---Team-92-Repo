@@ -55,7 +55,7 @@ Authenticated User:
     6. Give interactive interface to generate the right combination of code to use 
     7. Interactive Documentation
     8. Allow user save data and come back to download
-     - [ ]  uncompleted 
+   - [ ]  uncompleted 
 
     
 Unauthenticated User:
