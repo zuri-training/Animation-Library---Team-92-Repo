@@ -13,13 +13,14 @@ Download the [zip folder]():
 `<link rel="stylesheet" href="path/to/do-slide/dist/do-slide.min.css">`
 
 **HTML STRUCTURE:**
-`<div class="ds-parent">
+
+```<div class="ds-parent">
     <div class="moov-moveUp">
         <div>Section 1</div>
         <div>Section 2</div>
         <div>Section 3</div>
     </div>
-</div>`
+</div>```
 
 ## Installation
 
