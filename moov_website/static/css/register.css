@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+}
+main.wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+header {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25rem;
+}
+h2,p, label, input, input::placeholder{
+    color: #003773;
+}
+
+section.register {
+    padding: 2rem;
+}
+h2 {
+    margin-bottom: .5rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+main.registration-form > p {
+    margin-bottom: 2rem;
+}
+label {
+    display: block;
+    margin-bottom: 0rem;
+}
+input {
+    width: 340px;
+    margin-bottom: 1rem;
+    padding: 16px 20px;
+}
+div.alt-sign-in > p {
+    margin-bottom: .5rem;
+}
+div.other-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 8vw;
+}
+div.other-options > img {
+    width: 2rem;
+}
+div.subscription,
+div.privacy {
+    display: grid;
+    grid-template-columns: 1.5rem 16rem;
+}
+div.privacy > input {
+    width: min-content;
+}
+div.subscription > input {
+    width: min-content;
+}
+div.subscription > label,
+div.privacy > label {
+    font-size: 12px;
+}
+input[type = "submit"] {
+    width: 11rem;
+    background-color: #ee6c4d;
+    color: #f9f9f9;
+    cursor: pointer;
+    border: none;
+    padding: .5rem 1rem;
+}
+section.sign-in {
+    background-color: #002B59;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 5rem;
+    color: #fff;
+    width: 612px;
+}
+section.sign-in > p {
+    color: #fff;
+    width: 23rem;
+    margin-bottom: 2rem;
+}
+section.sign-in > a {
+    color: #fff;
+    border: solid 1px #fff;
+    width: 11rem;
+    padding: .5rem 1rem;
+    margin: 0 auto;
+    text-decoration: none;
+}
+h3 {
+    margin-bottom: .5rem;
+}
