@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+section.create{
+    align-content: center;
+    display: grid;
+    background-color:#002B59;
+    color: white;
+    padding: 4rem;
+    text-align: center;
+}
+
+section.create > h2{
+    margin-bottom: .5rem;
+}
+
+section.create > p {
+    width: 10rem;
+    margin: 0 auto;
+    width: 20rem;
+    margin-bottom: 5rem;
+}
+
+section.create > a {
+    color: #ffffff;
+    text-decoration: none;
+    border: solid 1px;
+    width: 10rem;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+
+section.forget {
+    padding: 2.5rem;
+    position: relative;
+    display: grid;
+    align-content: center;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+section.forget > h2 {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    color: #002B59;
+}
+
+section.forget > p {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: #003773;
+}
+
+label{
+    display: block;
+    margin-bottom: .5rem;
+    color: #003773;
+}
+
+input[type="email"] {
+    width: 18rem;
+    margin-bottom: 3rem;
+    padding: .5rem;
+    color: #003773;
+}
+
+input::placeholder {
+    color: #003773;
+}
+
+input[type = "submit"]{
+color: #f9f9f9;
+border: none;
+width: 8rem;
+background-color:  #EE6C4D;
+padding: .5rem 1rem;
+margin-bottom: 5rem;
+}
+
+section.forget > img {
+    position: absolute;
+    right: 2rem;
+    bottom: 4rem;
+}
