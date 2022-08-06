@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'moov_app'
+    'moov_app',
+    'dashboard'
 ]
 
 MIDDLEWARE = [
