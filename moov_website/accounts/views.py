@@ -9,3 +9,7 @@ def register(request):
 
 def login(request):
     return render(request, 'accounts/login.html')
+
+
+def contact(request):
+    return render(request, 'accounts/contact.html')
