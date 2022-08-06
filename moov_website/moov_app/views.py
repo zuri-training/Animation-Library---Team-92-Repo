@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def homepage(request):
     return render(request, 'moov_app/index.html')
+
+def documentation(request):
+    return render(request,'moov_app/library_documentation.html')
+
