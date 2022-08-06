@@ -1,0 +1,45 @@
+/* ------------------------------------------------ GLOBAL STYLING ----------------------------------------------- */
+
+:root {
+  --darker-blue: #002b59;
+  --body-white: #efefef;
+  --button-orange: #ee6c4d;
+  --dark-background: #202020;
+  --text-red: #fc1100;
+  --active-darkBlue: #003773;
+  --main-ash: rgb(32, 35, 39);
+  --trends-ash: rgb(22, 24, 28);
+  --border-ash: rgba(231, 233, 234, 0.3);
+  --icon-hover: rgba(29, 155, 240, 0.1);
+  --tweets-section-hover: rgba(67, 69, 70, 0.13);
+  --tweet-reaction-icons: rgba(231, 233, 234, 0.5);
+  font: 400 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: ;
+  color: ;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* ------------------------------------------------ GLOBAL STYLING ----------------------------------------------- */
