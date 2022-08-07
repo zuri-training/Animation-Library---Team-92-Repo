@@ -7,100 +7,170 @@
 html {
     font-size: 18px;
 }
-main.wrapper {
-    display: flex;
-    justify-content: center;
-    position: relative;
+body {
+    height: 100vh;
 }
-header {
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 25rem;
+.mobile {
+    display: block;
+    margin-bottom: 2rem;
 }
 h2,p, label, input, input::placeholder{
     color: #003773;
 }
-
+main.wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 95vw;
+    flex-direction: column;
+    margin: 0 auto;
+}
+header {
+    margin-bottom: 2rem;
+}
 section.register {
-    padding: 2rem;
+    padding: 2rem 0 0;
+}
+main.registration-form {
+    width: 85vw;
+    margin: 0 auto;
 }
 h2 {
     margin-bottom: .5rem;
-    font-weight: 700;
-    font-size: 2rem;
 }
 main.registration-form > p {
-    margin-bottom: 2rem;
-}
-label {
-    display: block;
-    margin-bottom: 0rem;
+    margin-bottom: 2.3rem;
 }
 input {
-    width: 340px;
+    width: 100%;
     margin-bottom: 1rem;
-    padding: 16px 20px;
+    padding: .5rem 1rem;
+    border: solid 1px;
+}
+div.mobile > p{
+    font-size: 12px;
+}
+div.alt-sign-in {
+    position: absolute;
+    bottom: -7rem;
+    left: 29vw;
+    text-align: center;
 }
 div.alt-sign-in > p {
-    margin-bottom: .5rem;
-}
-div.other-options {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 8vw;
-}
-div.other-options > img {
-    width: 2rem;
+    margin-bottom: 1rem;
 }
 div.subscription,
 div.privacy {
     display: grid;
     grid-template-columns: 1.5rem 16rem;
+    font-size: .7rem;
 }
-div.privacy > input {
-    width: min-content;
+input[type = "checkbox"] {
+    width: 80%;
 }
-div.subscription > input {
-    width: min-content;
-}
-div.subscription > label,
-div.privacy > label {
-    font-size: 12px;
+div.other-options {
+    width: 7rem;
+    margin: 0 auto;
 }
 input[type = "submit"] {
-    width: 11rem;
+    display: block;
+    width: 7rem;
+    margin: 0 auto;
     background-color: #ee6c4d;
     color: #f9f9f9;
     cursor: pointer;
     border: none;
     padding: .5rem 1rem;
 }
-section.sign-in {
-    background-color: #002B59;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    padding: 5rem;
-    color: #fff;
-    width: 612px;
+.desktop {
+    display: none;
 }
-section.sign-in > p {
-    color: #fff;
-    width: 23rem;
-    margin-bottom: 2rem;
+
+@media screen and (min-width: 768px) {
+    div.logo {
+        margin-bottom: 4rem;
+    }
+    main.registration-form {
+        width: 50vw;
+    }
+    div.privacy,
+    div.subscription {
+        grid-template-columns: 1.5rem 19.5rem;
+    }
+    div.alt-sign-in {
+        left: 39vw;
+    }
 }
-section.sign-in > a {
-    color: #fff;
-    border: solid 1px #fff;
-    width: 11rem;
-    padding: .5rem 1rem;
-    margin: 0 auto;
-    text-decoration: none;
-}
-h3 {
-    margin-bottom: .5rem;
+
+@media screen and (min-width: 1024px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+    main.wrapper {
+        flex-direction: row;
+        position: relative;
+    }
+    section.register {
+        margin-bottom: 6rem;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+    main.registration-form > p {
+        margin-bottom: 1.3rem;
+    }
+    input {
+        width: 60%;
+    }
+    div.alt-sign-in {
+        position: unset;
+        text-align: start;
+        margin-bottom: 1.3rem;
+    }
+    div.other-options {
+        margin: 0;
+    }
+    input[type = "submit"]{
+        width: 10rem;
+        margin: 0;
+    }
+    form {
+        position: relative;
+    }
+    form > img.desktop {
+        position: absolute;
+        bottom: 0rem;
+        right: 7rem;
+    }
+    section.sign-in {
+        background-color: #002B59;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 5rem;
+        color: #fff
+    }
+    section.sign-in > p {
+        color: #fff;
+        width: 23rem;
+        margin-bottom: 2rem;
+    }
+    section.sign-in > a {
+        color: #fff;
+        border: solid 1px #fff;
+        width: 11rem;
+        padding: .5rem 1rem;
+        margin: 0 auto;
+        text-decoration: none;
+    }
+    h3 {
+        margin-bottom: .5rem;
+    }
 }
