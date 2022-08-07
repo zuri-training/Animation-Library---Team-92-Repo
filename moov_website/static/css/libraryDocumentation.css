@@ -13,7 +13,7 @@
   --btn2-text: #f9f9f9;
   --gold: #fc8f00;
   --darker-background: #202020;
-  --tweet-reaction-icons: rgba(231, 233, 234, 0.5);
+  --cream-color: #fad1c8;
   font-family: "lato";
 }
 
@@ -133,6 +133,17 @@ span {
 .text_content4 {
   color: var(--light-blue);
   padding-left: 0.6rem;
+}
+.text_content5 {
+  color: var(--active-darkBlue);
+  padding: 0.7rem 0;
+}
+.text_content6 {
+  background-color: var(--cream-color);
+  color: var(--darker-background);
+  width: 90px;
+  padding: 0.3rem 0.5rem;
+  font-size: 10px;
 }
 
 /* HAMBUGER MENU FOR HEADER */
