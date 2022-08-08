@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("moov_app.urls")),
     path('account/', include("accounts.urls")),
+    path('dashboard/', include("dashboard.urls"))
 ]

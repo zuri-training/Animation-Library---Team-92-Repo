@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static '/css/library_interface.css' %} " />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <figure>
+          <img
+            src=" {% static '/images/profile_pic.png' %} "
+            alt="Default profile picture"
+          />
+        </figure>
+        <div class="side_bar_links">
+          <p><a href="{% url 'library' %} ">LIBRARY</a></p>
+          <p><a href="{% url 'saved_codes' %} ">SAVED</a></p>
+        </div>
+        <span>
+          <p><a href="logout">LOGOUT</a></p>
+        </span>
+      </div>
+      <div class="main_content">
+        <div class="anima-actions">
+          <h1>Category</h1>
+           <div class="anime_actions">
+            <div class="action_type">
+                <h2 class="animation_class">Bounce</h2>
+                
+                <button onclick="show()">BounceIn</button>
+                <button onclick="show2()">BounceInFromBottom</button>
+                <button onclick = "show3()">BounceOut</button>
+                <button onclick = "show4()">BounceOutFromBottom</button>
+                
+                
+              </div>
+              <div class="action_type">
+                <h2 class="animation_class">Fade</h2>
+                <button onclick=show5()>Fade_In</button>
+                <button onclick=show6()>Fade_inDown</button>
+                <button onclick=show7()>Fade_Out</button>
+                <button onclick=show8()>Fade-outLeft</button>
+              </div>
+              <div class="action_type">
+                <h2 class="animation_class">Moov</h2>
+                <button onclick=show9()>Move_InLeft</button>
+                <button onclick=show10()>Move_InUp</button>
+                <button onclick=show11()>Move_OutRight</button>
+                <button onclick=show12()>Move_OutUp</button>
+              </div>
+              <div class="action_type">
+                <h2 class="animation_class">Flip</h2>
+                <button onclick=show13() >flip_in_180</button>
+                <button onclick=show14()>flip_InX</button>
+                <button onclick=show15()>flip_Out_180</button>
+                <button onclick=show16()>flip_OutX</button>
+              </div>
+            </div>
+           
+           </div>
+        </div>
+        <div class="interface_section">
+            <div class="section_links">
+                <a href="" id='bordered'>Documentation</a>
+                <a href="" id=colored>Download Library</a>
+            </div>
+            <div class="display_anime">
+                <div id="box">
+                  
+                </div>
+               
+                <form action="">
+                  <div class="code_display">
+                    <input type="text" name="codes" id="display" placeholder='Animation codes will appear here' readonly> 
+                  <div class="copy">
+                    <img     src=" {% static '/images/Vector.png' %} " alt="copy" class='copyImg'>
+                   </div>
+                  </div>
+                 
+                   <button type='submit' class='saveBtn'>Save For Later</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+   <script src="{% static 'js/library.js' %}"></script>
+  </body>
+</html>
