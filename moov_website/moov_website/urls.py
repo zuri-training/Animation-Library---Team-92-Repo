@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from moov_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("moov_app.urls")),
     path('account/', include("accounts.urls")),
-    path('error/', views.errorPage, name="error")
 ]
