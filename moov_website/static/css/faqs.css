@@ -39,3 +39,85 @@ a{
     letter-spacing: 0.0025em;
     color: #003773;
 }
+
+#login{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 32px;
+    gap: 8px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.0025em;
+    color: #003773;
+    background: white;
+    border: 1px solid #003773;
+    border-radius: 4px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    width: 119px;
+    height: 56px;
+}
+
+#sign_up{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    padding: 8px;
+    gap: 8px;
+    width: 166px;
+    height: 56px;
+    background: #EE6C4D;
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.0025em;
+    color: #F9F9F9;
+    width: 166px;
+    height: 56px;
+}
+
+.sign_in_reg{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    width: 877px;
+    height: 72px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.0025em;
+    color: #003773;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.footerDiv{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}

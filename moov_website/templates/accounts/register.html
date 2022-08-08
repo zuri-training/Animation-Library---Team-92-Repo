@@ -39,6 +39,7 @@
           <h2>Get started with Moov</h2>
           <p>Create a free account today</p>
           <form action="" method="post">
+            {% csrf_token %}
             <div class="name">
               <label for="Name">Name</label><br />
               <input
@@ -125,7 +126,7 @@
         <p>
           To continue using Moov, please sign in with your personal information
         </p>
-        <a href="#">Sign In</a>
+        <a href="{% url 'accounts:login'%}">Sign In</a>
       </section>
     </main>
   </body>
