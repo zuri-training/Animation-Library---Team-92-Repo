@@ -222,6 +222,8 @@ span {
   background-color: var(--light-blue);
 }
 
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 875px) {
   .hamburger-menu {
     display: flex;
