@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static  'css/error_page.css' %}">
+    <title>Error Page!</title>
+</head>
+{% block content %}
+<body>
+    <img src="{% static '/images/moov_logo.png' %}" alt="moov_logo" id="logo">
+
+    <div id="errorDiv">
+        <img src="{% static '/images/error_image.png' %}" alt="Error Image" id="error_img">
+        <p>Sorry, the page you are looking for is not available</p>
+        <a href="index.html"><button id="previous_page">Go to previous page</button></a>
+    </div>
+</body>
+{% endblock %}
+</html>
