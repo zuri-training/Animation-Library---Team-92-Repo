@@ -1,0 +1,29 @@
+
+.container1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.container2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.container3{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+button{
+    padding: 1em;
+    background-color: #e7e7e7;
+    border: 1px solid #e1e1e1;
+}
+
+div{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
