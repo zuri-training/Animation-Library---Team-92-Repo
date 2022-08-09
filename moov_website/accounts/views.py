@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from .models import NewUser
-from .forms import RegistrationForm
-=======
 from django.shortcuts import render
->>>>>>> origin/GoddessOfWealth
+from .forms import RegistrationForm
+from .models import NewUser
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.shortcuts import render, redirect
+
 
 # Create your views here.
 
@@ -32,7 +30,6 @@ def register(request):
     return render(request, "accounts/register.html", context)
 
 
-<<<<<<< HEAD
 def loginPage(request):
     page = 'login'
 
@@ -58,7 +55,3 @@ def loginPage(request):
 
     context = {'page': page}
     return render(request, 'accounts/login.html', context)
-=======
-def login(request):
-    return render(request, 'accounts/login.html')
->>>>>>> origin/GoddessOfWealth
