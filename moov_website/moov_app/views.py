@@ -9,3 +9,6 @@ def homepage(request):
 def documentation(request):
     return render(request,'moov_app/library_Documentation.html' )
 
+def homes(request):
+    return render(request, 'moov_app/home.html')
+
