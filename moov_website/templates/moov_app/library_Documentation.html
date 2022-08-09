@@ -21,17 +21,15 @@
           <div>
             <a href="">Home</a>
           </div>
-          <div class="header-link2"><a href="">FAQ</a></div>
+          <div class="header-link2"><a href="{% url 'faqs' %}">FAQ</a></div>
           <div><a href="">Contact Us</a></div>
         </div>
 
-        <div class="btn">
-          <div class="btn_1">
-            <a href=""><button class="btn1">View Documentation</button></a>
-          </div>
-          <div>
-            <a href=""><button class="btn2">Go To Library</button></a>
-          </div>
+        <div class="section_links">
+          <a href="{% url 'documentation' %}" id="bordered"
+            >View Documentation</a
+          >
+          <a href="{% url 'library' %}" id="colored">Go to Library</a>
         </div>
       </div>
       <div class="hamburger-menu">
@@ -97,16 +95,16 @@
         </div>
 
         <div class="content_example">
-          <div style="display: flex;">
-            <p style="color: #b0d6ff;">&lt;</p>
-            <p style="color: #fc1100;">head</p>
-            <p style="color: #b0d6ff;">&gt;</p>
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">head</p>
+            <p style="color: #b0d6ff">&gt;</p>
           </div>
           <br />
 
-          <div style="display: flex;">
-            <p style="color: #b0d6ff;">&lt;</p>
-            <p style="color: #fc1100;">
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">
               link <br />
               <br />
               href="https://cdnjs.cloudflare.com/lib/moov.min.css"
@@ -114,17 +112,17 @@
               <br />
               rel="stylesheet"
             </p>
-            <p style="color: #b0d6ff;"></p>
+            <p style="color: #b0d6ff"></p>
           </div>
 
           <br />
-          <p style="color: #b0d6ff;">/&gt;</p>
+          <p style="color: #b0d6ff">/&gt;</p>
           <br />
 
-          <div style="display: flex;">
-            <p style="color: #b0d6ff;">&lt;</p>
-            <p style="color: #fc1100;">/head</p>
-            <p style="color: #b0d6ff;">&gt;</p>
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">/head</p>
+            <p style="color: #b0d6ff">&gt;</p>
           </div>
         </div>
         <div class="content_heading">
@@ -145,18 +143,18 @@
           <br />
         </div>
         <div class="content_example">
-          <div style="display: flex;">
-            <p style="color: #b0d6ff;">&lt;</p>
-            <p style="color: #fc1100;">div class="moov_animated blink"</p>
-            <p style="color: #b0d6ff;">&gt;</p>
-            <p style="color: #b0d6ff;">&lt;</p>
-            <p style="color: #fc8f00;">img src=”image.png”</p>
-            <p style="color: #b0d6ff;">/&gt;</p>
-            <p style="color: #b0d6ff;">&lt;</p>
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">div class="moov_animated blink"</p>
+            <p style="color: #b0d6ff">&gt;</p>
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc8f00">img src=”image.png”</p>
+            <p style="color: #b0d6ff">/&gt;</p>
+            <p style="color: #b0d6ff">&lt;</p>
 
-            <p style="color: #b0d6ff;">/</p>
-            <p style="color: #fc1100;">div</p>
-            <p style="color: #b0d6ff;">&gt;</p>
+            <p style="color: #b0d6ff">/</p>
+            <p style="color: #fc1100">div</p>
+            <p style="color: #b0d6ff">&gt;</p>
           </div>
         </div>
 
@@ -286,22 +284,20 @@
         </div>
         <br />
         <div class="content_example">
-          <div style="display: flex;">
-            <p style="color: #b0d6ff;">&lt;</p>
-            <p style="color: #fc1100;">
-              div class
-            </p>
-            <p style="color: #007aff;">
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">div class</p>
+            <p style="color: #007aff">
               ="moov_animated moov_bounce moov_delay-2s"
             </p>
 
-            <p style="color: #b0d6ff;">&gt;</p>
-            <p style="color: #efefef;">Try this</p>
-            <p style="color: #b0d6ff;">&lt;</p>
+            <p style="color: #b0d6ff">&gt;</p>
+            <p style="color: #efefef">Try this</p>
+            <p style="color: #b0d6ff">&lt;</p>
 
-            <p style="color: #b0d6ff;">/</p>
-            <p style="color: #fc1100;">div</p>
-            <p style="color: #b0d6ff;">&gt;</p>
+            <p style="color: #b0d6ff">/</p>
+            <p style="color: #fc1100">div</p>
+            <p style="color: #b0d6ff">&gt;</p>
           </div>
         </div>
         <div>
@@ -320,21 +316,21 @@
         </div>
         <br /><br />
         <div class="content_example">
-          <p style="color: #5b5b5b;">
+          <p style="color: #5b5b5b">
             /* All delay classes will take 2x longer to start */
           </p>
           <br />
           <span>:root</span>
-          <p style="color: #5b5b5b;">{</p>
-          <p style="color: #fc8f00;">--moov-delay: 1s;</p>
-          <p style="color: #5b5b5b;">}</p>
-          <p style="color: #5b5b5b;">
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 1s;</p>
+          <p style="color: #5b5b5b">}</p>
+          <p style="color: #5b5b5b">
             /* All delay classes will take half the time to start */
           </p>
           <span>:root</span>
-          <p style="color: #5b5b5b;">{</p>
-          <p style="color: #fc8f00;">--moov-delay: 2s;</p>
-          <p style="color: #5b5b5b;">}</p>
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 2s;</p>
+          <p style="color: #5b5b5b">}</p>
         </div>
 
         <div>
@@ -350,22 +346,20 @@
           <br />
         </div>
         <div class="content_example">
-          <div style="display: flex;">
-            <p style="color: #b0d6ff;">&lt;</p>
-            <p style="color: #fc1100;">
-              div class
-            </p>
-            <p style="color: #fad1c8;">
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">div class</p>
+            <p style="color: #fad1c8">
               ="moov_animated moov_blink moov_fast-2s"
             </p>
 
-            <p style="color: #b0d6ff;">&gt;</p>
-            <p style="color: #fc8f00;">Try this</p>
-            <p style="color: #b0d6ff;">&lt;</p>
+            <p style="color: #b0d6ff">&gt;</p>
+            <p style="color: #fc8f00">Try this</p>
+            <p style="color: #b0d6ff">&lt;</p>
 
-            <p style="color: #b0d6ff;">/</p>
-            <p style="color: #fc1100;">div</p>
-            <p style="color: #b0d6ff;">&gt;</p>
+            <p style="color: #b0d6ff">/</p>
+            <p style="color: #fc1100">div</p>
+            <p style="color: #b0d6ff">&gt;</p>
           </div>
         </div>
         <br />
@@ -383,26 +377,24 @@
           </p>
         </div>
         <div>
-          <p class="content_heading">
-            Example:
-          </p>
+          <p class="content_heading">Example:</p>
         </div>
         <div class="content_example">
-          <p style="color: #5b5b5b;">
+          <p style="color: #5b5b5b">
             /* All animations will take twice as long to finish */
           </p>
           <br />
           <span>:root</span>
-          <p style="color: #5b5b5b;">{</p>
-          <p style="color: #fc8f00;">--moov-delay: 1.2s;</p>
-          <p style="color: #5b5b5b;">}</p>
-          <p style="color: #5b5b5b;">
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 1.2s;</p>
+          <p style="color: #5b5b5b">}</p>
+          <p style="color: #5b5b5b">
             /* Only this element will take half the time to finish */
           </p>
           <span>.my-element </span>
-          <p style="color: #5b5b5b;">{</p>
-          <p style="color: #fc8f00;">--moov-delay: 800ms;</p>
-          <p style="color: #5b5b5b;">}</p>
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 800ms;</p>
+          <p style="color: #5b5b5b">}</p>
         </div>
         <br />
         <div>
@@ -415,9 +407,7 @@
         </div>
         <br />
         <div>
-          <p class="text_content">
-            Repeating Classes
-          </p>
+          <p class="text_content">Repeating Classes</p>
           <p class="text_content">
             By including these classes, as shown below, you can manage how many
             times the animation is iterated: We have different repeat properties
@@ -449,9 +439,7 @@
         </div>
         <div class="text_content">
           <ul>
-            <li>
-              Adesewa Adeboye - Product Design
-            </li>
+            <li>Adesewa Adeboye - Product Design</li>
             <li>Charles - Product Design</li>
             <li>Prosper - Product Design</li>
             <li>Hillz - Product Design</li>

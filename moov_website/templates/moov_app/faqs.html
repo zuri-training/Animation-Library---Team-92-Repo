@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static  'css/faqs.css' %}">
-    <title>Frequently Asked Questions </title>
-</head>
-{% block content %}
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static  'css/faqs.css' %}"
+    />
+    <title>Frequently Asked Questions</title>
+  </head>
+  {% block content %}
+  <body>
     <header>
-        <img src="{% static '/images/moov_logo.png' %}" alt="moov_logo" id="logo">
-        <div class="options">
-            <a href="home.html">Home</a>
-            <a href="documentation.html">Documentaion</a>
-            <a href="#">FAQs</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
+      <img
+        src="{% static '/images/moov_logo.png' %}"
+        alt="moov_logo"
+        id="logo"
+      />
+      <div class="options">
+        <a href="home.html">Home</a>
+        <a href="{% url 'documentation' %}">Documentaion</a>
+        <a href="#">FAQs</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
 
-        <div class="sign_in_reg">
-            <a href="{% url 'accounts:login'%}"><button id="login">Log In</button></a>
-            <a href="{% url 'accounts:register'%}"><button id="sign_up">Get Started</button></a>
-        </div>
+      <div class="sign_in_reg">
+        <a href="{% url 'accounts:login'%}"
+          ><button id="login">Log In</button></a
+        >
+        <a href="{% url 'accounts:register'%}"
+          ><button id="sign_up">Get Started</button></a
+        >
+      </div>
     </header>
 
     <main>
-        <h1>Frequently Asked Questions </h1>
+      <h1>Frequently Asked Questions</h1>
     </main>
 
     <footer>
-        <div class="footerDiv">
-            <img src="{% static '/images/moov_logo.png' %}" alt="moov_logo" id="logo_bottom">
-        </div>
-        <div class="footerDiv">
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-        </div>
-        <div class="footerDiv">
-            <a href="#">Documentaion</a>
-            <a href="#">Tutorial videos</a>
-        </div>
-        <div class="footerDiv">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms and Conditions</a>
-        </div>
-        <p>Copyright © 2022 Design Zuri team.  All rights reserved.</p>
+      <div class="footerDiv">
+        <img
+          src="{% static '/images/moov_logo.png' %}"
+          alt="moov_logo"
+          id="logo_bottom"
+        />
+      </div>
+      <div class="footerDiv">
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="footerDiv">
+        <a href="#">Documentaion</a>
+        <a href="#">Tutorial videos</a>
+      </div>
+      <div class="footerDiv">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+      </div>
+      <p>Copyright © 2022 Design Zuri team. All rights reserved.</p>
     </footer>
-</body>
-{% endblock %}
+  </body>
+  {% endblock %}
 </html>
