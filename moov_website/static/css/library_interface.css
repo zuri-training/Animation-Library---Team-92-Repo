@@ -1,0 +1,258 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+    
+    height: 150vh;
+    display: flex;
+}
+
+.sidebar{
+    background-color:#003773;
+    width:25%;
+    padding: 3em;
+}
+
+.sidebar img{
+    display: flex;
+    margin: auto;
+    width: 60%;
+}
+
+.side_bar_links{
+    margin-top: 4em;
+}
+
+.side_bar_links a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 400;
+
+
+}
+
+
+
+.side_bar_links p{
+    text-align: center;
+    line-height: 2em;
+}
+.side_bar_links p a:focus{
+    font-weight: 900;
+}
+.libLnk{
+    font-weight: 900;
+    color:red;
+}
+
+.sidebar span{
+    position: absolute;
+    bottom: -16em;
+    display: flex;
+    justify-content: center;
+    
+}
+.sidebar span a{
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+
+}
+
+/* main-content styling */
+.main_content{
+    display: flex;
+    padding: 2em;
+    color:#003773;
+}
+.anima-actions{
+
+}
+.anima-actions h1{
+    font-size: 20px;
+    font-weight: 900;
+}
+.anime_actions{
+    margin-top: 2em;
+    background-color:#F9F9F9;
+    padding: 1em;
+    flex-basis: 30%;
+    width: 20em;
+
+}
+
+.action_type{
+    margin-bottom: 2em;
+
+}
+.action_type h2{
+    margin-bottom: .5em;
+}
+.action_type h3{
+    opacity: .6;
+    cursor: pointer;
+}
+
+
+.action_type button{
+    border: none;
+    display: block;
+    line-height: 1em;
+    background-color: #F9F9F9;
+    width: 100%;
+    text-align: left;
+    color:#003773;
+    padding: .5em;
+    cursor: pointer;
+}
+
+button:focus{
+    background-color:#003773;
+    border: none;
+    color:#F9F9F9;
+}
+
+.interface_section{
+    
+    height: 100vh;
+    width: 100%;
+    margin-top: 4em;
+    padding:0 2em;
+}
+.section_links{
+    display: flex;
+    justify-content: flex-end;
+    gap:1em;
+}
+.section_links a{
+    text-decoration: none;
+    padding: 1em 3em;
+    
+    ;
+    border-radius: 4px;
+    font-weight: 900;
+    color:black;
+
+
+}
+
+#bordered{
+    background-color: none;
+    border: 2px solid #003773;
+    color:#003773;
+}
+#colored{
+    background-color: #EE6C4D;
+    color:#F9F9F9;
+}
+
+/* interface showcase design */
+
+.display_anime{
+    border: 3px dashed #D9D9D9;
+    width: 75%;
+    margin: auto;
+    height: 34em;
+    margin-top: 3em;
+}
+
+#box{
+    width:200px;
+    height:200px;
+    margin: auto;
+    margin-top: 3em;
+    background-color:#003773;
+}
+
+form{
+    margin-top: 5em;
+}
+#display{
+    border: none;
+    background-color: #F9F9F9;
+    width: 80%;
+    height: 6em;
+    margin-top: 10em;
+    margin: auto;
+    font-weight: 400;
+    padding: 2em;
+    color:#003773;
+    margin-bottom: 1em;
+    
+
+}
+.copy{
+    position: absolute;
+    right:9em;
+    margin-top: -3em;
+    margin-left: 1em;
+    
+}
+.copy img{
+    width:200%;
+    cursor: pointer;
+
+}
+.copy img:active{
+    background-color: #D9D9D9;
+}
+.copy img:before{
+    content:"copied";
+    position:absolute;
+    
+    background-color: #003773;
+    color:#fff;
+    padding:0px 10px;
+    border-radius: 20px;
+    font-size:15px;
+}
+.saveBtn{
+  position: absolute;
+  right:10em;
+  border: none;
+  background: none;
+  color:#003773;
+  font-weight: 900;
+  padding: .5em;
+  border-bottom: 4px solid #003773;
+  
+}
+
+#main{
+    background-color:grey;
+    height:2em;
+    width:10em;
+
+}
+
+/* animations */
+.addCSS{
+    color: red;
+    border-radius: 50%;
+}
+
+
+/* saved codes section */
+.codes_wrapper{
+    width: 147%;
+    padding: 3em;
+    
+}
+.code_header{
+    color:#003773;
+    font-weight: 900;
+}
