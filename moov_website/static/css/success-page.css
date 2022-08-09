@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  width: 100%;
+ 
   font-family: "Lato";
   font-style: normal;
 }
@@ -33,11 +33,11 @@ section.success {
 
 section.success > img {
   margin: auto;
-  padding-bottom: 65px;
+  padding-bottom:45px;
 }
 section.success > h2 {
   font-weight: 700;
-  font-size: 64px;
+  font-size: 3rem;
   line-height: 72px;
   /* identical to box height, or 112% */
 
@@ -51,7 +51,7 @@ section.success > h2 {
 
 section.success > p {
   font-weight: 500;
-  font-size: 36px;
+  font-size:1.5rem;
   line-height: 43px;
   letter-spacing: 0.0025em;
   /* Color Style/Primary Blue/Darker */
@@ -63,7 +63,9 @@ section.success > a {
 
 section.success > a button {
   padding: 24px 72px;
+  cursor: pointer;
   gap: 10px;
+  font-size: 16px;
   color: #f9f9f9;
 
   width: 327px;
@@ -94,14 +96,14 @@ section.success > a button {
   section.success > img {
     margin: auto;
     padding-bottom: 10px;
-    width: 200px;
+    width: 30%;
   }
   section.success > h2 {
     font-weight: 700;
     font-size: 45px;
     line-height: 73px;
     text-align: center;
-    letter-spacing: 0.0025em;
+    
     color: #003773;
   }
 }

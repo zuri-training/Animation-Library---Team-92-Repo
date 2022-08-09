@@ -55,3 +55,7 @@ def loginPage(request):
 
     context = {'page': page}
     return render(request, 'accounts/login.html', context)
+
+
+def successLog(request):
+    return render(request, 'accounts/successLogin.html')
