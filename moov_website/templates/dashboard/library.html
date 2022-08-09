@@ -8,12 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href=" {% static '/css/library_interface.css' %} " />
   </head>
-  <style>
-    .addCSS{
-      color: red;
-      border-radius: 50%;
-  }
-  </style>
   <body>
     <div class="wrapper">
       <div class="sidebar">
@@ -37,7 +31,7 @@
            <div class="anime_actions">
             <div class="action_type">
                 <h2 class="animation_class">Bounce</h2>
-                <button onclick="addClass()"> AddClass </button>
+                
                 <button onclick="show()">BounceIn</button>
                 <button onclick="show2()">BounceInFromBottom</button>
                 <button onclick = "show3()">BounceOut</button>
@@ -82,7 +76,7 @@
                
                 <form action="">
                   <div class="code_display">
-                    <div id="display"></div>
+                    <input type="text" name="codes" id="display" placeholder='Animation codes will appear here' readonly> 
                   <div class="copy">
                     <img     src=" {% static '/images/Vector.png' %} " alt="copy" class='copyImg'>
                    </div>
