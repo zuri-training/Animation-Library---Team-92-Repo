@@ -39,11 +39,12 @@
           <h2>Get started with Moov</h2>
           <p>Create a free account today</p>
           <form action="" method="post">
+            {% csrf_token %}
             <div class="name">
-              <label for="Name">Name</label><br />
+              <label for="Username">Name</label><br />
               <input
                 type="text"
-                name="Name"
+                name="user_name"
                 id="name"
                 placeholder="Jane Joe"
                 required
@@ -112,6 +113,19 @@
               >
             </div>
             <br />
+            {% for field in registration_form %}
+            <p>
+            {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+            {% endfor %}
+            </p>
+            {% endfor %}
+            {% if registration_form.non_field_errors %}
+            <div style="color: red">
+              <p>{{registration_form.non_field_errors}}</p>
+            </div>
+      
+            {% endif %}
             <input type="submit" value="Create Account" />
             <img
               src="{% static 'images/Tube_Short_Laying_1__R 4.png' %}"
