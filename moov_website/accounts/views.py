@@ -59,3 +59,7 @@ def loginPage(request):
 
 def successLog(request):
     return render(request, 'accounts/successLogin.html')
+
+
+def forgot_password(request):
+    return render(request, 'accounts/forgot_password.html')
