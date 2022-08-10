@@ -8,6 +8,6 @@ urlpatterns = [
     path('successLog/', views.successReg, name='successReg'),
     path('forgot_password/', views.forgot_password, name='forgotPassword'),
     path('contact/', views.contact, name='contact'),
-    path('privacy/', views.privacy, name='privacy')
+    
 
 ]

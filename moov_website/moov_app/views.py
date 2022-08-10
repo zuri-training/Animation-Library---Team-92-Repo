@@ -21,3 +21,7 @@ def documentation(request):
 
 def terms(request):
     return render(request, 'moov_app/terms.html')
+
+
+def privacy(request):
+    return render(request, 'moov_app/privacy policy.html')
