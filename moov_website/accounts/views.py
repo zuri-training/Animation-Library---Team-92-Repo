@@ -13,3 +13,7 @@ def login(request):
 
 def contact(request):
     return render(request, 'accounts/contact.html')
+
+
+def privacy(request):
+    return render(request, 'accounts/privacy policy.html')
