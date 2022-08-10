@@ -170,7 +170,7 @@ button:focus{
     margin-top: 3em;
 }
 
-#box{
+#myDIV{
     width:200px;
     height:200px;
     margin: auto;
@@ -256,3 +256,138 @@ form{
     color:#003773;
     font-weight: 900;
 }
+
+
+/* CSS AANIMATION */
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+  
+    70% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0) scaleY(1.05);
+    }
+  
+    80% {
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0) scaleY(0.95);
+    }
+  
+    90% {
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }
+  }
+  
+  .bounce {
+    animation-name: bounce;
+    transform-origin: center bottom;
+    animation-iteration-count:4;
+    animation-duration:.5s;
+  }
+
+
+  /*BOUNCE IN ANIMATION FROM THE BOTTOM*/
+
+  @keyframes bounceBtm{
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0);
+      }
+    
+      60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+      }
+    
+      75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+      }
+    
+      90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+      }
+    
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+  }
+  
+
+.bounceBtm {
+    transform-origin: center bottom;
+    animation-iteration-count:1;
+    animation-duration:.5s;
+    animation-name: bounceBtm;
+  }
+  
+ 
+  
+  @keyframes bounceOut{
+    20% {
+        transform: scale3d(0.9, 0.9, 0.9);
+      }
+    
+      50%,
+      55% {
+        opacity: 1;
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+    
+      to {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+  }
+  
+
+.bounceOut {
+    transform-origin: center bottom;
+    animation-iteration-count:1;
+    animation-duration:.5s;
+    animation-name: bounceOut;
+  }
+
+
+  .bounceOutFromBottom {
+    transform-origin: center bottom;
+    animation-iteration-count:1;
+    animation-duration:.5s;
+    animation-name: bounceOut;
+  }
+  @keyframes bounceOutFromBottom {
+    20% {
+      transform: translate3d(0, 10px, 0) scaleY(0.985);
+    }
+  
+    40%,
+    45% {
+      opacity: 1;
+      transform: translate3d(0, -20px, 0) scaleY(0.9);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, 2000px, 0) scaleY(3);
+    }
+  }
+  
+  
+ 
+  
+ 

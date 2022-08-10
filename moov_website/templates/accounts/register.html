@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,51 +42,33 @@
           <form action="" method="post">
             {% csrf_token %}
             <div class="name">
-              <label for="Name">Name</label><br />
+              <label for="Username">Name</label><br />
               <input
                 type="text"
-                name="Name"
+                name="user_name"
                 id="name"
                 placeholder="Jane Joe"
                 required
               />
-            </div>
-            <div class="email">
-              <label for="Email">Email</label><br />
-              <input
-                type="email"
-                name="Email"
-                id="email"
-                placeholder="example@gmail.com"
-                required
-              />
-            </div>
-            <div class="password">
-              <label for="Password">Password</label><br />
-              <input
-                type="password"
-                name="Password"
-                id="password"
-                placeholder="password"
-                required
-              />
-            </div>
-            <div class="mobile">
-              <p>Already have an account? <a href="#">Login</a></p>
-            </div>
-            <div class="alt-sign-in">
-              <p>Or sign in with:</p>
-              <div class="other-options">
-                <a href="#"
-                  ><img src="{% static 'images/Google - jpeg.png' %}"
-                /></a>
-                <a href="#"
-                  ><img src="{% static 'images/XMLID_26_.png' %}"
-                /></a>
-                <a href="#"
-                  ><img src="{% static 'images/Facebook - jpeg.png' %}"
-                /></a>
-              </div>
+          </div
+          <div class="email">
+            <label for="Email">Email</label><br>
+            <input type="email" name="Email" id="email" placeholder="example@gmail.com" required>
+          </div>
+          <div class="password">
+            <label for="Password">Password</label><br>
+            <input type="password" name="Password" id="password" placeholder="password" required>
+          </div>
+          <div class="mobile">
+            <p>Already have an account? <a href="#">Login</a></p>
+          </div>
+          <div class="alt-sign-in">
+            <p>Or sign in with:</p>
+            <div class="other-options">
+              <a href="#"><img src="{% static 'images/Google - jpeg.png' %}"></a>
+              <a href="#"><img src="{% static 'images/XMLID_26_.png' %}"></a>
+              <a href="#"><img src="{% static 'images/Facebook - jpeg.png' %}"></a>
+
             </div>
             <div class="privacy">
               <input
@@ -113,6 +96,19 @@
               >
             </div>
             <br />
+            {% for field in registration_form %}
+            <p>
+            {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+            {% endfor %}
+            </p>
+            {% endfor %}
+            {% if registration_form.non_field_errors %}
+            <div style="color: red">
+              <p>{{registration_form.non_field_errors}}</p>
+            </div>
+      
+            {% endif %}
             <input type="submit" value="Create Account" />
             <img
               src="{% static 'images/Tube_Short_Laying_1__R 4.png' %}"
@@ -126,7 +122,7 @@
         <p>
           To continue using Moov, please sign in with your personal information
         </p>
-        <a href="{% url 'accounts:login'%}">Sign In</a>
+        <a href="{% url 'login'%}">Sign In</a>
       </section>
     </main>
   </body>

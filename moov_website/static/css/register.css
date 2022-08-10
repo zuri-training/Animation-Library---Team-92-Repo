@@ -21,7 +21,7 @@ main.wrapper {
     display: flex;
     justify-content: center;
     position: relative;
-    width: 95vw;
+    width: 90vw;
     flex-direction: column;
     margin: 0 auto;
 }
