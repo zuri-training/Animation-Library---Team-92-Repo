@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -50,37 +50,7 @@
                 placeholder="Jane Joe"
                 required
               />
-=======
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'CSS/register.css' %}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <title>Sign Up || MOOV</title>
-  <script src="https://kit.fontawesome.com/6680184395.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <main class="wrapper">
-    <section class="register">
-      <div class="logo mobile">
-        <img src="{% static 'images/Vector.png' %}"> <img src="{% static 'images/Vector (1).png' %}"> <img src="{% static 'images/Vector (2).png' %}"> <img src="{% static 'images/Vector (3).png' %}">
-      </div>
-      <header>
-        <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="{% static 'images/Tube_Short_Laying_1__R 3.png' %}" class="desktop">
-      </header>
-      <main class="registration-form">
-        <h2>Get started with Moov</h2>
-        <p>Create a free account today</p>
-        <form action="" method="post">
-          <div class="name">
-            <label for="Name">Name</label><br>
-            <input type="text" name="Name" id="name" placeholder="Jane Joe" required>
-          </div>
+          </div
           <div class="email">
             <label for="Email">Email</label><br>
             <input type="email" name="Email" id="email" placeholder="example@gmail.com" required>
@@ -152,7 +122,7 @@
         <p>
           To continue using Moov, please sign in with your personal information
         </p>
-        <a href="{% url 'accounts:login'%}">Sign In</a>
+        <a href="{% url 'login'%}">Sign In</a>
       </section>
     </main>
   </body>
