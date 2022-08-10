@@ -17,3 +17,7 @@ def FAQPage(request):
 
 def documentation(request):
     return render(request, 'moov_app/library_documentation.html')
+
+
+def terms(request):
+    return render(request, 'moov_app/terms.html')
