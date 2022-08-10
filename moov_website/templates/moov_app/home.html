@@ -28,7 +28,7 @@
         <p>
           <a href=""><b>Home</b></a>
         </p>
-        <p><a href="">Documentation</a></p>
+        <p><a href="{% url 'documentation'%}">Documentation</a></p>
         <p><a href="">Contact Us</a></p>
       </div>
       <div class="action_btns">
@@ -44,7 +44,9 @@
         </label>
         <div class="nav_links_slider">
           <label for="hamburger">x </label>
-          <p><b>Home</b></p>
+          <a href=""
+            ><p><b>Home</b></p></a
+          >
           <p>Documentation</p>
           <p>Contact Us</p>
           <button class="logIn_btn">Log In</button>
@@ -308,12 +310,12 @@
         <div class="footer_right_section flex">
           <div><a href="#">Contact Us</a></div>
           <div>
-            <a href="#">Documentation</a>
+            <a href="{url 'documentation'}">Documentation</a>
             <a href="#">Tutorial Videos</a>
           </div>
           <div>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms and Conditions</a>
+            <a href="">Privacy Policy</a>
+            <a href="{% url  't&c' %}">Terms and Conditions</a>
           </div>
         </div>
       </div>

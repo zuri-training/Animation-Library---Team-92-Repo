@@ -57,7 +57,7 @@ def loginPage(request):
     return render(request, 'accounts/login.html', context)
 
 
-def successLog(request):
+def successReg(request):
     return render(request, 'accounts/successLogin.html')
 
 
