@@ -25,7 +25,7 @@ Download the [zip folder]():
 
 ## Example
 
-This basic code is to appply a bouceIn animation:
+This basic code is to apply a bouceIn animation:
 
 ```
 <div class="moov-bounceIn"></div>
@@ -127,7 +127,6 @@ Although it is conceivable, you should refrain from animating the html or body t
 Although utility classes for repeating animations, including an infinite one, are provided by moov.css, you should avoid using them. It will merely divert your users and possibly irritate a sizable portion of them. Use it accordingly.
 
 The CSS property animation-fill-mode, which regulates an element's states before and after animation, is a component of every Moov.css animation. Learn more about it by visiting this page. The animation-fill-mode setting in Moov.css is both by default, but you can modify it to meet your specific requirements.
-
 Some usage that can’t be avoided
 Despite the fact that some browsers support inline animation, doing so violates the CSS animation specifications and will eventually malfunction or stop working on some browsers. Always animate items at the block or inline-block level (grid and flex containers and children are block-level elements too). When animating an inline-level element, you can set the element to display: inline-block.
 The majority of Animate.css animations move elements throughout the screen and may result in scrollbars on your web application. Using the overflow: hidden property, you may control this. The basic principle is to apply it in the parent holding the animated element, but there is no set formula for when and where to use it. You must determine when and how to use it; this guide can assist you do so.
