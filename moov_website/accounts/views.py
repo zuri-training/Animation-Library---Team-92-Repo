@@ -30,6 +30,7 @@ def register(request):
     return render(request, "accounts/register.html", context)
 
 
+
 def loginPage(request):
     page = 'login'
 
@@ -63,3 +64,12 @@ def successReg(request):
 
 def forgot_password(request):
     return render(request, 'accounts/forgot_password.html')
+
+
+def contact(request):
+    return render(request, 'accounts/contact.html')
+
+
+def privacy(request):
+    return render(request, 'accounts/privacy policy.html')
+
