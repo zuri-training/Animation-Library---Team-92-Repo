@@ -1,0 +1,38 @@
+
+.container1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.container2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.container3{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+button{
+    padding: 1em;
+    background-color: #e7e7e7;
+    border: 1px solid #e1e1e1;
+}
+
+button:hover{
+    background-color: #d5d5d5;
+}
+
+div{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.contain{
+    display: flex;
+    flex-direction: column;
+}
