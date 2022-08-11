@@ -21,23 +21,24 @@
         id="logo"
       />
       <div class="options">
-        <a href="home.html">Home</a>
-        <a href="{% url 'moov_app:documentation' %}">Documentaion</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'documentation' %}">Documentaion</a>
         <a href="#">FAQs</a>
         <a href="{% url 'moov_app:contact' %}">Contact Us</a>
       </div>
 
       <div class="sign_in_reg">
+
         <a href="{% url 'accounts:login'%}"
           ><button id="login">Log In</button></a
         >
-        <a href="{% url 'accounts:register'%}"
-          ><button id="sign_up">Get Started</button></a
+        <a href="{% url 'accounts:register'%}"><button id="sign_up">Get Started</button></a
         >
       </div>
     </header>
 
     <main>
+
       <div>
         <h1>Frequently Asked Questions</h1>
       </div>
@@ -231,9 +232,9 @@
           </div>
       </div>
     </main>
-
     <footer>
       <div class="footerDiv">
+
         <div class="innerFooterDiv">
           <img
             src="{% static '/images/moov_logo.png' %}"
@@ -259,6 +260,25 @@
           Copyright © 2022 Design Zuri team. All rights reserved.
         </p>
       </div>
+        <img
+          src="{% static '/images/moov_logo.png' %}"
+          alt="moov_logo"
+          id="logo_bottom"
+        />
+      </div>
+      <div class="footerDiv">
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="footerDiv">
+        <a href="#">Documentaion</a>
+        <a href="#">Tutorial videos</a>
+      </div>
+      <div class="footerDiv">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+      </div>
+      <p>Copyright © 2022 Design Zuri team. All rights reserved.</p>
     </footer>
   </body>
   {% endblock %}

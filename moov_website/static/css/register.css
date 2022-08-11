@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'lato';
 }
 html {
     font-size: 18px;
@@ -21,7 +22,7 @@ main.wrapper {
     display: flex;
     justify-content: center;
     position: relative;
-    width: 95vw;
+    width: 90vw;
     flex-direction: column;
     margin: 0 auto;
 }
@@ -32,8 +33,11 @@ section.register {
     padding: 2rem 0 0;
 }
 main.registration-form {
-    width: 85vw;
+    padding-top:7em;
+    padding-left: 4px;
+    width: 90vw;
     margin: 0 auto;
+    background-color: #f5f5f5;
 }
 h2 {
     margin-bottom: .5rem;
@@ -41,23 +45,28 @@ h2 {
 main.registration-form > p {
     margin-bottom: 2.3rem;
 }
+form{
+    margin-top: 2em;
+}
 input {
     width: 100%;
     margin-bottom: 1rem;
     padding: .5rem 1rem;
-    border: solid 1px;
+    outline: none;
+    background-color: #f5f5f5;
+    border: solid 1px #003773;
+
 }
 div.mobile > p{
     font-size: 12px;
 }
-div.alt-sign-in {
-    position: absolute;
-    bottom: -7rem;
-    left: 29vw;
-    text-align: center;
+.alt-sign-in {
+   
+    margin-bottom: 2em;
 }
 div.alt-sign-in > p {
     margin-bottom: 1rem;
+    
 }
 div.subscription,
 div.privacy {
@@ -68,9 +77,13 @@ div.privacy {
 input[type = "checkbox"] {
     width: 80%;
 }
-div.other-options {
+.other-options{
+    margin-bottom: 2em;
+}
+.other-options a{
     width: 7rem;
     margin: 0 auto;
+    margin-right: 1em;
 }
 input[type = "submit"] {
     display: block;

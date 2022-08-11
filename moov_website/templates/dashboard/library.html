@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="{% static '/moov_animations/library.css/Main_moov/moov.css' %}">
+    <link rel="stylesheet" href="{% static '/moov_animations/library.css/moov.min.css' %}">
+
     <link rel="stylesheet" href=" {% static '/css/library_interface.css' %} " />
   </head>
+
   <body>
+
+
     <div class="wrapper">
       <div class="sidebar">
         <figure>
@@ -16,23 +22,27 @@
             src=" {% static '/images/profile_pic.png' %} "
             alt="Default profile picture"
           />
+          {% if user.is_authenticated %}
+         <p id='username'>{{user.username}}</p>
+          {% endif %}
+          
         </figure>
         <div class="side_bar_links">
-          <p><a href="{% url 'library' %} ">LIBRARY</a></p>
-          <p><a href="{% url 'saved_codes' %} ">SAVED</a></p>
+          <p><a href="{% url 'library' %} "><b>LIBRARY</b></a></p>
+          <p><a href="{% url 'saved_anime' %} ">SAVED</a></p>
         </div>
         <span>
-          <p><a href="logout">LOGOUT</a></p>
+          <p id='logout'><a href="{% url 'logout' %}">LOGOUT</a></p>
         </span>
       </div>
       <div class="main_content">
         <div class="anima-actions">
-          <h1>Category</h1>
+          <h1 class=moov_animated BounceIn>Category</h1>
            <div class="anime_actions">
             <div class="action_type">
                 <h2 class="animation_class">Bounce</h2>
                 
-                <button onclick="show()">BounceIn</button>
+                <button onclick="myFunction()">BounceIn</button>
                 <button onclick="show2()">BounceInFromBottom</button>
                 <button onclick = "show3()">BounceOut</button>
                 <button onclick = "show4()">BounceOutFromBottom</button>
@@ -66,15 +76,16 @@
         </div>
         <div class="interface_section">
             <div class="section_links">
-                <a href="" id='bordered'>Documentation</a>
-                <a href="" id=colored>Download Library</a>
+                <a href="{% url 'documentation' %}" id='bordered'> View Documentation</a>
+                <a href="{% url 'download' %}" id=colored>Download Library</a>
             </div>
             <div class="display_anime">
-                <div id="box">
+                <div id="myDIV">
                   
                 </div>
                
-                <form action="">
+                <form action="saved" method='POST'>
+                  {% csrf_token %}
                   <div class="code_display">
                     <input type="text" name="codes" id="display" placeholder='Animation codes will appear here' readonly> 
                   <div class="copy">
