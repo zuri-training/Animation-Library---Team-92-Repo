@@ -1,11 +1,14 @@
-
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings 
 from django.contrib import messages
+from django.core.mail import  BadHeaderError
 from .forms import *
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+from django.contrib.auth.models import User
+
+
 
 
 # Create your views here.
