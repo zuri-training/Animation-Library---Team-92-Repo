@@ -1,25 +1,21 @@
-from django.shortcuts import render
-from .forms import RegistrationForm
-from .models import NewUser
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.contrib.auth import login, authenticate
+from django.contrib import messages
+from accounts.forms import RegistrationForm
 
 
-# Create your views here.
+def register(request, *args, **kwargs):
 
-
-def register(request):
     context = {}
     if request.POST:
-        form = RegistrationForm(request.POST or None)
+        form = RegistrationForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            password = form.cleaned_data.get('password')
-            user.set_password(password)
-            user.save()
-            new_user = authenticate(username=user.username, password=password)
-
+            form.save()
+            email = form.cleaned_data.get('email').lower()
+            raw_password = form.cleaned_data.get('password1')
+            account = authenticate(email=email, password=raw_password)
+            login(request, account)
             return redirect('login')
         else:
             context['registration_form'] = form
@@ -27,16 +23,17 @@ def register(request):
     else:
         form = RegistrationForm()
         context['registration_form'] = form
-    return render(request, "accounts/register.html", context)
+    return render(request, 'accounts/register.html', context)
 
+# Create your views here.
 
 
 def loginPage(request):
     page = 'login'
 
     # prevents users from entering the login page when already logged in.
-    if request.user.is_authenticated:
-        return redirect('home')
+    # if request.user.is_authenticated:
+    #     return redirect('home')
 
     if request.method == 'POST':
         email = request.POST.get('email').lower()
@@ -68,4 +65,3 @@ def forgot_password(request):
 
 def contact(request):
     return render(request, 'accounts/contact.html')
-

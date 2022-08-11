@@ -24,7 +24,7 @@
           />
         </figure>
         <div class="side_bar_links">
-          <p><a href="{% url 'library' %} ">LIBRARY</a></p>
+          <p><a href="{% url 'library' %} "><b>LIBRARY</b></a></p>
           <p><a href="{% url 'saved_codes' %} ">SAVED</a></p>
         </div>
         <span>
@@ -80,7 +80,8 @@
                   
                 </div>
                
-                <form action="">
+                <form action="saved" method='POST'>
+                  {% csrf_token %}
                   <div class="code_display">
                     <input type="text" name="codes" id="display" placeholder='Animation codes will appear here' readonly> 
                   <div class="copy">

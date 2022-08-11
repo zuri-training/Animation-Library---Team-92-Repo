@@ -10,10 +10,8 @@ def library_view(request):
 
 
 def saved_codes(request):
-    code = request.GET['codes']
-    context = {'code': code}
+    return render(request, 'dashboard/saved.html')
 
-    return render(request, 'dashboard/saved.html', context)
 
 def download_library(request):
     return render(request, 'dashboard/download.html')

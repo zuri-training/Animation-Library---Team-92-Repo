@@ -1,32 +1,17 @@
 from django.contrib import admin
-
-# Register your models here.
-
-from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import NewUser
-# Register your models here.
+from accounts.models import NewUser
 
 
-class UserAdminConfig(UserAdmin):
-    search_fields = ('email', 'user_name', 'first_name',)
-    list_filter = ('email', 'user_name', 'first_name', 'is_active')
-    ordering = ('-start_date',)
-    list_display = ('email', 'user_name', 'first_name',
-                    'is_active', 'is_staff', 'is_superuser')
+class AccountAdmin(UserAdmin):
+    list_display = ('email', 'username', 'date_joined',
+                    'is_admin', 'is_staff')
+    search_fields = ('email', 'username',)
+    readonly_fields = ('id', 'date_joined')
 
-    fieldsets = (
-        (None, {'fields': ('email', 'user_name', 'first_name',)}),
-        ('Permissions', {'fields': ('is_staff', 'is_active')}),
-        ('Personal', {'fields': ('about',)}),
-    )
-
-    add_fieldsets = (
-        (None, {
-            'classes': ('wide',),
-            'fields': ('email', 'user_name', 'first_name', 'password1', 'password2', 'is_active', 'is_staff')}
-         ),
-    )
+    filter_horizontal = ()
+    list_filter = ()
+    fieldsets = ()
 
 
-admin.site.register(NewUser, UserAdminConfig)
+admin.site.register(NewUser, AccountAdmin)
