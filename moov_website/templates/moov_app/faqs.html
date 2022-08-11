@@ -22,9 +22,9 @@
       />
       <div class="options">
         <a href="home.html">Home</a>
-        <a href="documentation.html">Documentaion</a>
+        <a href="{% url 'moov_app:documentation' %}">Documentaion</a>
         <a href="#">FAQs</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="{% url 'moov_app:contact' %}">Contact Us</a>
       </div>
 
       <div class="sign_in_reg">
@@ -242,16 +242,16 @@
           />
         </div>
         <div class="innerFooterDiv">
-          <a href="#">Contact Us</a>
+          <a href="{% url 'moov_app:contact' %}">Contact Us</a>
           <a href="#">About Us</a>
         </div>
         <div class="innerFooterDiv">
-          <a href="#">Documentaion</a>
+          <a href="{% url 'moov_app:documentation' %}">Documentaion</a>
           <a href="#">Tutorial videos</a>
         </div>
         <div class="innerFooterDiv">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms and Conditions</a>
+          <a href="{% url 'moov_app:privacy' %}">Privacy Policy</a>
+          <a href="{% url 'moov_app:t&c' %}">Terms and Conditions</a>
         </div>
       </div>
       <div>
