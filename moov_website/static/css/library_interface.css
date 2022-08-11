@@ -45,7 +45,6 @@ body{
 }
 
 
-
 .side_bar_links p{
     text-align: center;
     line-height: 2em;
@@ -124,6 +123,10 @@ button:focus{
     background-color:#003773;
     border: none;
     color:#F9F9F9;
+}
+
+#accordion li label{
+  color:red;
 }
 
 .interface_section{
