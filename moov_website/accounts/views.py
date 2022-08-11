@@ -8,17 +8,12 @@ from accounts.forms import RegistrationForm
 def register(request, *args, **kwargs):
 
     context = {}
-    if request.POST:
-        form = RegistrationForm(request.POST)
+    form = RegistrationsForm()
+    if request.method == 'POST':
+        form = RegsitrationForm(request.POST)
         if form.is_valid():
             form.save()
-            email = form.cleaned_data.get('email').lower()
-            raw_password = form.cleaned_data.get('password1')
-            account = authenticate(email=email, password=raw_password)
-            login(request, account)
             return redirect('login')
-        else:
-            context['registration_form'] = form
 
     else:
         form = RegistrationForm()
@@ -47,7 +42,7 @@ def loginPage(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('success')
         else:
             messages.error(request, 'Username OR Password does not exist.')
 
@@ -55,7 +50,7 @@ def loginPage(request):
     return render(request, 'accounts/login.html', context)
 
 
-def successReg(request):
+def success(request):
     return render(request, 'accounts/successLogin.html')
 
 
