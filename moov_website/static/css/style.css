@@ -879,7 +879,7 @@ footer {
 
 .bounce {
   animation-name: bounce;
-  animation-iteration-count:1;
+  animation-iteration-count:2s;
   animation-duration:.5s;
   
 }

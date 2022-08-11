@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'lato';
+    background-color: #F5F5F5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 32px;
+}
+.logo-menu-icon {
+    display: none;
+}
+
+.navbar a {
+    padding: 16px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 20px;
+    cursor: pointer;
+    color: #003773;
+}
+
+.home {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    color: #003773;
+    cursor: pointer;
+}
+
+.log {
+    border: 1px solid #003773;
+    border-radius: 4px;
+    margin-right: 14px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.start {
+    background: #EE6C4D;
+    border-radius: 4px;
+    color: #F5F5F5;
+    padding: 7px;
+    border: 1px solid #EE6C4D;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Lato';
+    font-weight: 700;
+    color: #292929;
+    font-size: 36px;
+    margin: 0 40px;
+}
+
+.date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000;
+    opacity: 0.3;
+    margin: 0 40px;
+}
+
+h2 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    margin: 40px 40px 20px 40px;
+    color: #292929;
+}
+
+h3 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    margin: 20px 40px;
+    color: #292929;;
+}
+
+p {
+    font-family: 'Lato';
+    font-style: normal;
+    margin: 9px 40px;
+    color: #292929;
+    font-size: 17px;
+    font-weight: 400; 
+}
+
+.mail {
+    color: #003773;
+    width: 217px;
+    margin: 20px 40px;
+    cursor: pointer;
+}
+
+
+/* footer styling starts here */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 32px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    gap: 20px;
+}
+
+.moovlogo {
+    width: 71.01px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+ul {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+ul a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.copyright {
+    text-align: center;
+    color: #003773;
+    font-size: 14px;
+}
+
+/* footer styling end here */
+
+
+/* media querry starts here */
+
+@media (min-width: 834px) and (max-width: 1280px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo-menu-icon {
+        display: block;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .social-icons a {
+        font-size: 14px;
+    }
+    
+
+    ul {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (min-width: 375px) and (max-width: 575px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-menu-icon {
+        display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .mail {
+        font-size: 12px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .moovlogo {
+        margin: auto;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 5px;
+    }
+
+    ul {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+}  
+
+
+

@@ -29,11 +29,24 @@
           <a href=""><b>Home</b></a>
         </p>
         <p><a href="{% url 'documentation'%}">Documentation</a></p>
-        <p><a href="">Contact Us</a></p>
+        <p><a href="{% url 'contact' %}">Contact Us</a></p>
       </div>
       <div class="action_btns">
-        <button class="logIn_btn">Log In</button>
-        <button class="getStartedBtn1">Get Started</button>
+        {% if user.is_authenticated %}
+        <a href="{% url 'library' %}">
+          <button class="getStartedBtn1">Go to Dashboard</button></a
+        >
+        <a href="{% url 'logout' %}">
+          <button class="logIn_btn">Logout</button></a
+        >
+        {% else %}
+        <a href="{% url 'login' %}">
+          <button class="logIn_btn">Log In</button></a
+        >
+        <a href="{% url 'register' %}">
+          <button class="getStartedBtn1">Get Started</button></a
+        >
+        {% endif %}
       </div>
       <label for="hamburger" class="hamburger_icon">
         <input type="checkbox" id="hamburger" hidden class="hamburger_input" />
@@ -49,7 +62,7 @@
           >
           <p>Documentation</p>
           <p>Contact Us</p>
-          {% comment %} <button class="logIn_btn">Log In</button> {% endcomment %}
+          <button class="logIn_btn">Log In</button>
           <button class="getStartedBtn1">Get Started</button>
         </div>
       </label>
@@ -58,7 +71,11 @@
       <section>
         <div class="heroSection">
           <div class="heroSection_bg">
-            <img src="{% static 'images/assets/hero-bg.png' %}" alt="hero_bg" class='bounce' />
+            <img
+              src="{% static 'images/assets/hero-bg.png' %}"
+              alt="hero_bg"
+              class="bounce"
+            />
           </div>
           <h1>Moov; making animation simple and easy to use</h1>
           <p>
