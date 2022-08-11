@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --moov-duration: 1s;
+}
+
 .p-wrapper {
   margin: 25px 70px;
 }
@@ -101,9 +105,6 @@ header {
   padding: 0px 200px;
   margin-bottom: 28px;
   line-height: 72px;
-  animation-name: shakeX;
-  animation-duration: 1s;
-  animation-iteration-count: 2;
 }
 
 .heroSection p {
@@ -152,6 +153,7 @@ header {
   background: #f2f8ff;
   width: 300px;
   height: 300px;
+  overflow: hidden;
 }
 
 .featuredAnimationsBtn {
@@ -576,6 +578,18 @@ footer {
     display: block;
   }
 
+  .hamburger_icon {
+    width: 30px;
+  }
+
+  .hamburger > img {
+    margin-bottom: 10px;
+  }
+
+  .nav_links_slider {
+    padding: 20px;
+  }
+
   .hamburger_input + .nav_links_slider {
     width: 30%;
     top: 0;
@@ -853,6 +867,29 @@ footer {
     padding: 0;
   }
 
+  .moreDetails {
+    padding: 34px 16px;
+  }
+
+  .moreDetailsText h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .moreDetailsText p {
+    font-size: 15px;
+    line-height: 19.2px;
+    font-weight: 400;
+  }
+
+  .documentationBtn {
+    font-size: 18px;
+    font-weight: 400;
+    width: 204px;
+    height: 39px;
+  }
+
   .footer_top_section {
     flex-direction: column-reverse;
     gap: 30px;
@@ -1065,4 +1102,161 @@ footer {
   backface-visibility: visible !important;
   -webkit-animation-name: flip_In_180;
   animation-name: flip_In_180;
+}
+
+@-webkit-keyframes Move_OutUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes Move_OutUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.Move_OutUp {
+  -webkit-animation-name: Move_OutUp;
+  animation-name: Move_OutUp;
+}
+
+@-webkit-keyframes Move_OutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes Move_OutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.Move_OutDown {
+  -webkit-animation-name: Move_OutDown;
+  animation-name: Move_OutDown;
+}
+
+@-webkit-keyframes Move_OutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes Move_OutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.Move_OutRight {
+  -webkit-animation-name: Move_OutRight;
+  animation-name: Move_OutRight;
+}
+
+@keyframes Move_OutLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.Move_OutLeft {
+  -webkit-animation-name: Move_OutLeft;
+  animation-name: Move_OutLeft;
+}
+
+@keyframes blink {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation-name: blink;
+}
+
+@-webkit-keyframes fade_Out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade_Out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade_Out {
+  -webkit-animation-name: fade_Out;
+  animation-name: fade_Out;
+}
+
+.moov_animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: var(--moov-duration);
+  animation-duration: var(--moov-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
