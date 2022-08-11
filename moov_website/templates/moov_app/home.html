@@ -29,7 +29,7 @@
           <a href=""><b>Home</b></a>
         </p>
         <p><a href="{% url 'documentation'%}">Documentation</a></p>
-        <p><a href="">Contact Us</a></p>
+        <p><a href="{% url 'contact' %}">Contact Us</a></p>
       </div>
       <div class="action_btns">
         {% if user.is_authenticated %}

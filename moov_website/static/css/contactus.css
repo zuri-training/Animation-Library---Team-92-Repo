@@ -10,7 +10,8 @@ body {
     background-color: #F5F5F5;
 }
 .wrapper {
-    height: 100vh;
+    width: 100;
+    /* height: 100%; */
 }
 
 /* header styling starts here */
@@ -19,7 +20,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .header a {
@@ -27,28 +28,31 @@ body {
     font-family: 'Lato';
     font-style: normal;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .contact {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 900;
-    font-size: 20px;
     color: #003773;
+    cursor: pointer;
 }
 
 .log {
     border: 1px solid #003773;
     border-radius: 4px;
-    width: 145px;
     margin-right: 14px;
+    padding: 7px;
+    cursor: pointer;
 }
 
 .start {
     background: #EE6C4D;
     border-radius: 4px;
     color: #F5F5F5;
-    width: 212px;
+    padding: 7px;
+    border: 1px solid #EE6C4D;cursor: pointer;
 }
 
 /* header styling ends here */
@@ -58,18 +62,20 @@ body {
 .section {
     display: flex;
     justify-content: space-around;
-    margin: 8em auto;
+    margin: 4em auto;
 }
 
 h3 {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 38px;
+    cursor: pointer;
 }
 
 .imagetext {
-    margin: 20px 0;
+    margin-top: 20px 0;
+    width: 470px;
 } 
 
 p {
@@ -77,11 +83,8 @@ p {
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    margin: 26px 0;
-}
-
-label {
-    display: block;
+    margin-bottom: 26px;
+    cursor: pointer;
 }
 
 fieldset {
@@ -94,7 +97,8 @@ input {
     width: 613px;
     border-radius: 4px;
     border: 1px solid #003773;
-    margin: 15px 0;
+    margin: 10px 0;
+    cursor: pointer;
 }
 
 textarea {
@@ -102,10 +106,11 @@ textarea {
     width: 609px;
     height: 231px;
     border-radius: 4px;
-    margin: 15px 0;
+    margin-bottom: 15px;
+    margin: 10px 0;
 }
 
-button {
+.sm-btn {
     background: #EE6C4D;
     border-radius: 4px;
     color: #F5F5F5;
@@ -114,6 +119,147 @@ button {
     left: 732px;
     top: 807px;
     border: none;
+    cursor: pointer;
 }
 
-/* section styling ends here */ 
+/* section styling ends here */
+
+
+@media (min-width: 833px) and (max-width: 1280px) {
+    .page-logo {
+        width: 95px;
+    }
+    .header {
+        padding: 7px;
+    }
+    
+    .header a {
+        padding: 7px;
+        font-size: 18px;
+    }
+    .section {
+        display: flex;
+        justify-content: space-around;
+        margin: 4em auto;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    .imagetext {
+        margin-top: 20px 0;
+        width: 350px;
+    }
+    input {
+        display: block;
+        padding: 10px;
+        width: 313px;
+        border-radius: 4px;
+        border: 1px solid #003773;
+        margin: 7px 0;
+    }
+    
+    textarea {
+        display: block;
+        width: 313px;
+        height: 201px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        margin: 7px 0;
+    }
+    
+    p {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    
+    .sm-btn {
+        width: 150px;
+        height: 46px;
+        left: 732px;
+        top: 807px;
+        border: none;
+    }
+}
+
+@media (width: 375px) {
+
+    .page-logo {
+        width: 95px;
+        margin-bottom: 7px;
+        cursor: pointer;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .header a {
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 4em auto;
+    }
+    
+    h3 {
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .log {
+        padding: 7px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+
+    .start {
+        padding: 7px;
+        border: 1px solid #EE6C4D;
+        margin-top: 17px;
+        cursor: pointer;
+    }
+    .imagetext {
+        margin-top: 20px 0;
+        width: 157px;
+        text-align: center;
+    }
+    input {
+        display: block;
+        padding: 10px;
+        width: 300px;
+        margin: 7px 0;
+        cursor: pointer;
+    }
+    
+    textarea {
+        display: block;
+        width: 300px;
+        height: 101px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        margin: 7px 0;
+        cursor: pointer;
+    }
+    
+    p {
+        font-size: 22px;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    
+    .sm-btn {
+        width: 150px;
+        height: 46px;
+        left: 732px;
+        top: 807px;
+        border: none;
+        cursor: pointer;
+    }
+}

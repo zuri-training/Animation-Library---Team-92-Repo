@@ -71,6 +71,3 @@ def success(request):
 def forgot_password(request):
     return render(request, 'accounts/forgot_password.html')
 
-
-def contact(request):
-    return render(request, 'accounts/contact.html')
