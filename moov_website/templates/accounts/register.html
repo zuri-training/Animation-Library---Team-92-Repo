@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sign Up</title>
+    <script
+      src="https://kit.fontawesome.com/6680184395.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <section class="register">
+        <div class="logo mobile">
+          <img src="{% static 'images/Vector.png' %}" />
+          <img src="{% static 'images/Vector (1).png' %}" />
+          <img src="{% static 'images/Vector (2).png' %}" />
+          <img src="{% static 'images/Vector (3).png' %}" />
+        </div>
+        <header>
+          <a href="{% url 'home' %}"><i class="fa-solid fa-arrow-left"></i></a>
+          <img
+            src="{% static 'images/Tube_Short_Laying_1__R 3.png' %}"
+            class="desktop"
+          />
+        </header>
+      </section>
+      <main class="registration-form">
+        <h2>Get started with Moov</h2>
+        <p>Create a free account today</p>
+        <form class="form-signin" method="post">
+          {% csrf_token %}
+          {% for field in registration_form %}
+          <p>
+          {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+          {% endfor %}
+          </p>
+          {% endfor %}
+          {% if registration_form.non_field_errors %}
+          <div style="color: red">
+            <p>{{registration_form.non_field_errors}}</p>
+          </div>
+        
+          {% endif %}
+          <div class="name">
+            <label for="Username">Email</label><br />
+            <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus class='email'>
+        </div
+        <div class="email">
+          <label for="Email">Name</label><br>
+          <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required class="firstName">
+        </div>
+        <div class="password">
+          <label for="Password">Password</label><br>
+          <input type="password" name="password1" id="inputPassword" class="form-control" placeholder="Password" required class="password">
+        </div>
+        <div class="password">
+          <label for="Password">Confirm Password</label><br>
+          <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm password" required class="password">
+        </div>
+  
+
+ 
+
+        <div class="mobile">
+          <p>Already have an account? <a href="#">Login</a></p>
+        </div>
+        
+          <div class="privacy">
+            <input
+              type="checkbox"
+              name="privacy-policy"
+              id="privacy-policy"
+              required
+            />
+            <label for="privacy-policy"
+              >By creating a free account, you agree to the privacy policy and
+              terms of moov.</label
+            >
+          </div>
+          <br />
+          <div class="subscription">
+            <input
+              type="checkbox"
+              name="subscribtion"
+              id="subscribtion"
+              required
+            />
+            <label for="subscribtion"
+              >Would you like to subscribe to our weekly newsletter and
+              receive updates delivered straight to your inbox?</label
+            >
+          </div>
+          <br />
+          
+          <input type="submit" value="Create Account" id='btn' />
+          <img
+            src="{% static 'images/Tube_Short_Laying_1__R 4.png' %}"
+            class="desktop"
+          />
+        </form>
+      </main>
+      <section class="sign-in desktop">
+        <h3>Already have an account?</h3>
+        <p>
+          To continue using Moov, please sign in with your personal information
+        </p>
+        <a href="{% url 'login'%}">Sign In</a>
+      </section>
+    </main>
+    <script src="{% static 'js/register.js' %}"></script>
+  </body>
+</html>

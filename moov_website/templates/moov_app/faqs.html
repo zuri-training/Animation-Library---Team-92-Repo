@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static  'css/faqs.css' %}"
+    />
+    <link
+    rel="shortcut icon"
+    href="{% static 'images/Moov Favicon (White BG).png' %}"
+    type="image/x-icon"
+  />
+    <title>Frequently Asked Questions</title>
+  </head>
+  {% block content %}
+  <body>
+    <header>
+      <img
+        src="{% static '/images/moov_logo.png' %}"
+        alt="moov_logo"
+        id="logo"
+      />
+      <div class="options">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'documentation' %}">Documentaion</a>
+        <a href="#">FAQs</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="sign_in_reg">
+
+        <a href="{% url 'login'%}"
+          ><button id="login">Log In</button></a
+        >
+        <a href="{% url 'register'%}"><button id="sign_up">Get Started</button></a
+        >
+      </div>
+    </header>
+
+    <main>
+
+      <div>
+        <h1>Frequently Asked Questions</h1>
+      </div>
+      <div class="div1">
+        <div class="faq_topics">
+          <div class="topics"><p>Basics</p></div>
+          <div class="topics"><p>Technical</p></div>
+          <div class="topics"><p>Compatibility</p></div>
+          <div class="topics"><p>Community</p></div>
+          <div class="topics"><p>Troubleshooting</p></div>
+          <div class="topics"><p>Free Trials</p></div>
+          <div class="topics"><p>Learning Moov</p></div>
+        </div>
+        <div class="faq_body">
+          <div class="main_topic"><p>Basics</p></div>
+          <div class="sub_topic"><p>Account</p></div>
+          <div class="question"><p>I am having troubles logging in, how can I reset my password?</p></div>
+          <div class="answer">
+            <p>
+              If you are yet to sign up (unauthorised user), then you will need to sign up to generate a password.
+              If you have forgotten your password, please go to this link to request for password reset: https://xxxxxxxx/password/reset (You will need to enter your email address and a password reset link will be sent to your email.) 
+              Or click forgot password on the sign in page.
+              If you are already signed in, but cannot remember your password, You can reset your password here under your Account Settings.
+            </p>
+          </div>
+          <div class="question"><p>How can u edit and update my profile?</p></div>
+          <div class="answer">
+            <p>
+              Click the user Icon on your dashboard to view your profile page/Account. And then click on “Edit Profile” to edit your profile.
+            </p>
+          </div>
+          <div class="question"><p>Why can’t I change my email address?</p></div>
+          <div class="answer">
+            <p>
+              You probably have not verified your email. To change your email address or your password, firstly you will need to make sure that you have verified your email address.
+              Go to Edit profile on your account Scroll down to email, if you haven’t verified your email, you will see a red sign on your email asking you to verify.
+              Click to verify.
+            </p>
+          </div>
+          <div class="question"><p>How can i change my email address?</p></div>
+          <div class="answer">
+            <p>
+              To Change Email Address;
+              1) Go to 'Edit Profile' on your account
+              2) Click 'Account Settings'
+              3) Enter your new email and click send verification. Resend if the email doesn't arrive.
+              4) You will get a confirmation email, go click that verification link in the email.
+              5) You can choose to set a new password after verifying the email.
+            </p>
+          </div>
+          <div class="question"><p>What happens when I delete my account?</p></div>
+          <div class="answer">
+            <p>
+              To delete your account;
+              Go to Settings on your dashboard
+              In Settings, click on Manage Account.
+              Click Delete Account.
+              Read through to understand what happens when you delete your account.
+              Click delete account if you still want to go through with it.
+              To proceed, confirm your action when asked on the in-app pop-up message.
+              You will get a notification of deletion in progress, you can cancel deletion before the 24-hrs grace elapses.
+            </p>
+          </div>
+          <div class="question"><p>How do I delete an account?</p></div>
+          <div class="answer">
+            <p>
+              Go to Settings on your dashboard
+              In Settings, click on Manage Account.
+              Click Delete Account
+            </p>
+          </div>
+          <div class="sub_topic2"><p>GENERAL ANIMATION QUESTIONS</p></div>
+          <div class="question"><p>Why should I use Moov?</p></div>
+          <div class="answer">
+            <p>
+              Moov has a pool of pre-made animations at the disposal of the users, for them to embed their codes either by import, embed, or package manager installation. 
+              Users can also download the Library, save and create personalized Libraries that are specific to their projects and also be able to download later. 
+              Moov also shows users, usage examples on how to use the library, and also provides an interactive interface to generate the right combination of codes to use.
+               Moov also has its complete features on all mobile devices which means you can complete your work anywhere, anytime and even on- the- go.
+            </p>
+          </div>
+          <div class="question"><p>What is Moov?</p></div>
+          <div class="answer">
+            <p>
+              Moov is an animation Library platform that allows beginners (designers & developers) to perform basic web animation using normal language. 
+              It is a platform that users visit and can view basic information about it, view and interact with the documentation, sign up to gain full  
+              access to the Library.
+            </p>
+          </div>
+          <div class="question"><p>Who can use Moov?</p></div>
+          <div class="answer">
+            <p>
+              Moov lets you create vector animations, advertisements, multimedia content, immersive experiences, applications, games, and more, 
+              in a timeline-based authoring environment. It also offers native support for multiple outputs such as HTML5 Canvas and WebGL, and is extensible to support 
+              custom formats such as Snap.SVG. Animate also supports creation and publishing of Flash formats, and packaging applications. Hence, Moov Is meant for 
+              EVERYONE. Designers, developers, motion graphics artists, marketers, basically CREATIVES. Note that; Moov’s flexibility with output formats ensure 
+              that your content can be viewed anywhere, without the need for plug-ins.
+            </p>
+          </div>
+          <div class="question"><p>Can I animate illustrations on Moov?</p></div>
+          <div class="answer"><p>Anything can be animated on moov - words, letters, illustrations, images etc.</p></div>
+          <div class="question"><p>Can animate Logos on Moov?</p></div>
+          <div class="answer"><p>Yes, you can.</p></div>
+          <div class="question"><p>Can I edit animation properties to suit my preference?</p></div>
+          <div class="answer">
+            <p>
+              Yes, you can. Moov’s interface is interactive and hence allows you to interact with the codes, embed your own codes, and create your personalised animations.
+            </p>
+          </div>
+          <div class="question"><p>What formats can I import files to be animated?</p></div>
+          <div class="answer">
+            <p>
+              You can either import your html files to the platform and embed your codes on the platform, or download our library to be able to use our animations. 
+              For Images; png, jpeg, Ssvg
+            </p>
+          </div>
+          <div class="main_topic"><p>Technical</p></div>
+          <div class="question"><p>What type of html content is Moov best suited to producing?</p></div>
+          <div class="answer"><p> All html contents are suitable.</p></div>
+          <div class="question"><p>What are the minimum system requirements to run Moov?</p></div>
+          <div class="answer"><p> See system requirements for information.</p></div>
+          <div class="main_topic2"><p>Compatibility</p></div>
+          <div class="question"><p>Is Moov useable on mobile device?</p></div>
+          <div class="answer"><p>Yes, Moov is usable on mobile devices</p></div>
+          <div class="question"><p>How can I preview my animations on mobile?</p></div>
+          <div class="answer"><p>The same way you preview on desktop. There is an interface provided for you to preview your animations.</p></div>
+          <div class="question"><p>How do I save animation to collection using a mobile device?</p></div>
+          <div class="answer">
+            <p> The same way you save on desktop. Click on the “save for later” button and you can view your saved animations on your dashboard.</p></div>
+          <div class="question"><p>How can I download animations using my mobile device?</p></div>
+          <div class="answer"><p> You can download the library, by simply clicking on “download Library” button</p></div>
+          <div class="main_topic2"><p>Troubleshoot</p></div>
+          <div class="question"><p>Why am i having issues downloading library?</p></div>
+          <div class="answer">
+            <p>
+              You probably aren’t clicking on the right button. To download, click “download library”. If problem persist, it could be your network/signal 
+              strength - check your network.
+            </p>
+          </div>
+          <div class="question"><p>Why is my animation not displaying and I’m getting a blank screen?</p></div>
+          <div class="answer">
+            <p>
+              This means you haven’t called out the animation properly. You can go back to documentation and read how to properly use the classes 
+              and animations in your html file.
+            </p>
+          </div>
+          <div class="question"><p>Why is my animation not displaying and I’m getting blank screen on my Mac?</p></div>
+          <div class="answer">
+            <p>
+              This means you haven’t called out the animation properly. You can go back to documentation and read how to properly use the classes
+               and animations in your html file.
+            </p>
+          </div>
+          <div class="main_topic2"><p>Free Trials</p></div>
+          <div class="question"><p>Where can i get a free version of Moov?</p></div>
+          <div class="answer"><p>This version of Moov is free. And there currently is no paid version.</p></div>
+          <div class="question"><p>Is there a paid version of Moov with more features?</p></div>
+          <div class="answer"><p> No, Moov is a free library and you get access to all features once you sign up and become an authorized user.</p></div>
+          <div class="main_topic2"><p>Learning Moov</p></div>
+          <div class="question"><p>How can i get started with Moov?</p></div>
+          <div class="answer">
+            <p>
+              To get started, kindly go through our documentation to learn about how to use MOOV. Also go through our Terms and conditions as well as our Privacy Policy.
+            </p>
+          </div>
+          <div class="question"><p>Where can i find a manual?</p></div>
+          <div class="answer"><p>You can a get step by step explanation on how to use Moov on our documentation.</p></div>
+          <div class="question"><p>Where can i get the best free resources to learn about Moov?</p></div>
+          <div class="answer"><p> The best resources to learn about Moov, can be found in our documentation. And its completely free. Click here</p></div>
+          <div class="question"><p>Are there tutorials to help me learn how to animate illustrations on Moov?</p></div>
+          <div class="answer"><p>To learn how to animate on Moov, kindly see our usage examples in the Library.</p></div>
+          <div class="question"><p>Can i get an explanation on how to go about animating using Moov?</p></div>
+          <div class="answer"><p>To know how to use Moov, See libarary documentation.</p></div>
+        </div>
+      </div>
+      <div class="helpful">
+        <p>Was this page helpful?</p><button>Yes thanks</button><button>Not really</button>
+      </div>
+      <div class="contact">
+        <div>
+          <p>Contact Us</p>
+          <p>Get help from real people.</p>
+        </div>
+        
+        <div class="vec"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M33.7723 20.6042C32.9482 20.6042 32.2965 19.9334 32.2965 19.1284C32.2965 18.4192 31.5873 16.9434 30.399 15.6592C29.2298 14.4134 27.9457 13.6851 26.8723 13.6851C26.0482 13.6851 25.3965 13.0142 25.3965 12.2092C25.3965 11.4042 26.0673 10.7334 26.8723 10.7334C28.789 10.7334 30.8015 11.7684 32.5648 13.6276C34.2132 15.3717 35.2673 17.5376 35.2673 19.1092C35.2673 19.9334 34.5965 20.6042 33.7723 20.6042Z" fill="#003773"/>
+          <path d="M40.6899 20.6038C39.8657 20.6038 39.2141 19.933 39.2141 19.128C39.2141 12.3238 33.6749 6.80384 26.8899 6.80384C26.0657 6.80384 25.4141 6.13301 25.4141 5.32801C25.4141 4.52301 26.0657 3.83301 26.8707 3.83301C35.3041 3.83301 42.1657 10.6947 42.1657 19.128C42.1657 19.933 41.4949 20.6038 40.6899 20.6038Z" fill="#003773"/>
+          <path d="M21.1798 28.6538L17.634 32.1997C16.8865 32.9472 15.6982 32.9472 14.9315 32.2188C14.7207 32.008 14.5098 31.8163 14.299 31.6055C12.3248 29.6122 10.5423 27.523 8.95148 25.338C7.37982 23.153 6.11482 20.968 5.19482 18.8022C4.29398 16.6172 3.83398 14.528 3.83398 12.5347C3.83398 11.2313 4.06398 9.98551 4.52398 8.83551C4.98398 7.66634 5.71232 6.59301 6.72815 5.63467C7.95482 4.42717 9.29648 3.83301 10.7148 3.83301C11.2515 3.83301 11.7882 3.94801 12.2673 4.17801C12.7657 4.40801 13.2065 4.75301 13.5515 5.25134L17.9982 11.5188C18.3432 11.998 18.5923 12.4388 18.7648 12.8605C18.9373 13.263 19.0332 13.6655 19.0332 14.0297C19.0332 14.4897 18.899 14.9497 18.6307 15.3905C18.3815 15.8313 18.0173 16.2913 17.5573 16.7513L16.1007 18.2655C15.8898 18.4763 15.794 18.7255 15.794 19.0322C15.794 19.1855 15.8132 19.3197 15.8515 19.473C15.909 19.6263 15.9665 19.7413 16.0048 19.8563C16.3498 20.4888 16.944 21.313 17.7873 22.3097C18.6498 23.3063 19.5698 24.3222 20.5665 25.338C20.7582 25.5297 20.969 25.7213 21.1607 25.913C21.9273 26.6605 21.9465 27.8872 21.1798 28.6538Z" fill="#003773"/>
+          <path d="M42.1076 35.1327C42.1076 35.6693 42.0118 36.2252 41.8201 36.7618C41.7626 36.9152 41.7051 37.0685 41.6284 37.2218C41.3026 37.9118 40.8809 38.5635 40.3251 39.1768C39.3859 40.2118 38.3509 40.9593 37.1818 41.4385C37.1626 41.4385 37.1434 41.4577 37.1243 41.4577C35.9934 41.9177 34.7668 42.1668 33.4443 42.1668C31.4893 42.1668 29.4001 41.7068 27.1959 40.7677C24.9918 39.8285 22.7876 38.5635 20.6026 36.9727C19.8551 36.4168 19.1076 35.861 18.3984 35.2668L24.6659 28.9993C25.2026 29.4018 25.6818 29.7085 26.0843 29.9193C26.1801 29.9577 26.2951 30.0152 26.4293 30.0727C26.5826 30.1302 26.7359 30.1493 26.9084 30.1493C27.2343 30.1493 27.4834 30.0343 27.6943 29.8235L29.1509 28.386C29.6301 27.9068 30.0901 27.5427 30.5309 27.3127C30.9718 27.0443 31.4126 26.9102 31.8918 26.9102C32.2559 26.9102 32.6393 26.9868 33.0609 27.1593C33.4826 27.3318 33.9234 27.581 34.4026 27.9068L40.7468 32.411C41.2451 32.756 41.5901 33.1585 41.8009 33.6377C41.9926 34.1168 42.1076 34.596 42.1076 35.1327Z" fill="#003773"/>
+          </svg>
+          </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerDiv">
+
+        <div class="innerFooterDiv">
+          <img
+            src="{% static '/images/moov_logo.png' %}"
+            alt="moov_logo"
+            id="logo_bottom"
+          />
+        </div>
+        <div class="innerFooterDiv">
+          <a href="#">Contact Us</a>
+          <a href="#">About Us</a>
+        </div>
+        <div class="innerFooterDiv">
+          <a href="#">Documentaion</a>
+          <a href="#">Tutorial videos</a>
+        </div>
+        <div class="innerFooterDiv">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+      </div>
+      <div>
+        <p id="reserved">
+          Copyright © 2022 Design Zuri team. All rights reserved.
+        </p>
+      </div>
+        <img
+          src="{% static '/images/moov_logo.png' %}"
+          alt="moov_logo"
+          id="logo_bottom"
+        />
+      </div>
+      <div class="footerDiv">
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="footerDiv">
+        <a href="#">Documentaion</a>
+        <a href="#">Tutorial videos</a>
+      </div>
+      <div class="footerDiv">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+      </div>
+      <p>Copyright © 2022 Design Zuri team. All rights reserved.</p>
+    </footer>
+  </body>
+  {% endblock %}
+</html>

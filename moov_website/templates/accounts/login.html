@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static  'css/login.css' %}">
+    <title>Login Page</title>
+    <link
+    rel="shortcut icon"
+    href="{% static 'images/Moov Favicon (White BG).png' %}"
+    type="image/x-icon"
+  />
+</head>
+{% block content %}
+<body>
+    <div id="left">
+        <div id="signup_ask">
+            <p id="p1">Don't have an account?</p>
+            <p id="p2">Sign up to get full access to the library and explore animations.</p>
+            <a href="{% url 'register'%}"><button id="account_create_btn">Create Account</button></a>
+        </div>
+    </div>
+    <div id="login_area">
+        <div>
+            <h2>Welcome Back</p>
+            <p>Log in to coninue using Moov</p>
+        </div>
+        <div>
+            <form  method="POST">
+                {% csrf_token %}
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="example@email.com"><br>
+
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"><br>
+
+                <input type="checkbox" name="remeber_me" id="remeber_me">
+                <label for="remeber_me">Remember Me</label><br>
+                {% comment %} <p>Forgot password? click <a href="{% url 'password_reset' %}">here</a></p> {% endcomment %}
+
+                <input type="submit" value="Sign in">
+            </form>
+        </div> 
+    </div>
+</body>
+{% endblock %}
+</html>

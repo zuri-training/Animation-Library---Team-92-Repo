@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-m##ijx5=(u^mrn#!h7jxoe0vi*cu&!bc%cx3wi7qa(t0(0b=8w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'moov_app'
+    'moov_app',
+    'dashboard'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,8 +81,10 @@ WSGI_APPLICATION = 'moov_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'moov_website',
+        'USER': 'Adetayo',
+        'PASSWORD': 'passworld2019',
     }
 }
 
@@ -102,7 +106,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'teekaymartha@gmail.com'
+EMAIL_HOST_PASSWORD = 'whfsresychnqiwwf'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
@@ -120,6 +132,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+AUTHENTICATION_BACKENDS = {
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
+    'accounts.backends.CaseInsensitiveModelBackend'
+}
+
 
 MEDIA_URL = 'images/'
 
@@ -133,3 +150,23 @@ AUTH_USER_MODEL = 'accounts.NewUser'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# # Media rootto store images
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+# contact settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'kehindemarthaoluwatoyin@gmail.com'
+EMAIL_HOST_PASSWORD = 'oluwatoyinmartha'
+
+
+
+

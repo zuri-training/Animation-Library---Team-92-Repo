@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static '/css/saved_style.css' %} " />
+    <link rel="stylesheet" href=" {% static '/css/download.css' %} " />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,700;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+  </head>
+  <style>
+    .addCSS{
+      color: red;
+      border-radius: 50%;
+  }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <figure>
+          <img
+            src=" {% static '/images/profile_pic.png' %} "
+            alt="Default profile picture"
+          />
+        </figure>
+        <div class="side_bar_links">
+          <p><a href="{% url 'library' %} "  class='libLnk'>LIBRARY</a></p>
+          <p><a href="{% url 'saved_codes' %} " class='saveLnk'>SAVED</a></p>
+        </div>
+        <span>
+          <p><a href="logout">LOGOUT</a></p>
+        </span>
+      </div>
+        <div class="codes_wrapper">
+            <main>
+                <div class="container">
+        
+                    <h2>Download Moov Library</h2>
+        
+                    <div class="flex-moov">
+                        <p id='p'>Copy CDN</p>
+                        
+        
+                       <!-- text field -->
+        
+                        <div class="field">
+                            <input class="input-field" value="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" type="text" name="text" id="text" readonly>
+                        <i onclick="myFunction()" class="fa-regular fa-copy icon "><br> <span onclick="myFunction()"  class="copy" >copy</span></i>
+                        </div>
+                         <div class="flex-moov">
+        
+                        <!-- The button used to copy the text -->
+                        <button onclick="download()" class="input-field" id="button" type="submit"> Download ZIP </button>
+        
+                    </div>
+        
+        
+                </div>
+            </main>
+        </div>
+      </div>
+    </div>
+   <script src="{% static 'js/download.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,474 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moov Documentation</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/Moov Favicon (White BG).png' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href=" {% static '/css/libraryDocumentation.css' %} "
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <img src=" {% static '/images/moov_logo.jpeg' %} " alt="moov_logo" />
+        </div>
+        <div class="header-links">
+          <div>
+            <a href="{% url 'home' %}">Home</a>
+          </div>
+          <div class="header-link2"><a href="{% url 'faqs' %}">FAQ</a></div>
+          <div><a href="">Contact Us</a></div>
+        </div>
+
+        <div class="section_links">
+          <a href="{% url 'documentation' %}" id="bordered"
+            >View Documentation</a
+          >
+          <a href="{% url 'dashboard:library' %}" id="colored">Go to Library</a>
+        </div>
+      </div>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#">Home</a></li>
+          <li><a class="menu__item" href="#">FAQ</a></li>
+          <li><a class="menu__item" href="#">Contact Us</a></li>
+          <li><a class="menu__item" href="#">View Documentation</a></li>
+          <li><a class="menu__item" href="#">Go to Library</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h3>Documentation</h3>
+        <div>
+          <p class="text_content">
+            Moov is an open source library that allows beginners to perform
+            basic web animation using everyday language, the Moov library allows
+            users to add animations to websites.
+          </p>
+        </div>
+        <div>
+          <p class="content_heading">Installation and Usage</p>
+        </div>
+        <div>
+          <p class="text_content1">Download from <a href="">here</a></p>
+        </div>
+        <div>
+          <div>
+            <p class="text_content2">Import it into your file:</p>
+          </div>
+          <div class="content_example">
+            <p class="text_content3">import <span>‘moov.css';</span></p>
+          </div>
+        </div>
+        <div>
+          <p class="text_content2">
+            If you are using an HTML structure you can also add to As
+          </p>
+          <div class="content_example">
+            <p class="text_content4">
+              <
+              <span> link </span><br /><br />
+              <span>rel</span>="stylesheet" <br /><br />
+              <span>href</span>="[download-path]/moov.css" <br /><br />
+              />
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <p class="text_content2">
+            Or add it directly to your webpage using a CDN:
+          </p>
+        </div>
+
+        <div class="content_example">
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">head</p>
+            <p style="color: #b0d6ff">&gt;</p>
+          </div>
+          <br />
+
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">
+              link <br />
+              <br />
+              href="https://cdnjs.cloudflare.com/lib/moov.min.css"
+              <br />
+              <br />
+              rel="stylesheet"
+            </p>
+            <p style="color: #b0d6ff"></p>
+          </div>
+
+          <br />
+          <p style="color: #b0d6ff">/&gt;</p>
+          <br />
+
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">/head</p>
+            <p style="color: #b0d6ff">&gt;</p>
+          </div>
+        </div>
+        <div class="content_heading">
+          <p>Basic usage</p>
+        </div>
+        <div class="text_content">
+          <p>
+            After adding or embedding the moov.css library to your code, Always
+            ensure before calling your animation name you include
+            “moov_animated” then the animation name.
+          </p>
+        </div>
+        <div class="content_heading">
+          <p>Example</p>
+        </div>
+        <div class="text_content">
+          <p>This basic code is to apply a blink animation:</p>
+          <br />
+        </div>
+        <div class="content_example">
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">div class="moov_animated blink"</p>
+            <p style="color: #b0d6ff">&gt;</p>
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc8f00">img src=”image.png”</p>
+            <p style="color: #b0d6ff">/&gt;</p>
+            <p style="color: #b0d6ff">&lt;</p>
+
+            <p style="color: #b0d6ff">/</p>
+            <p style="color: #fc1100">div</p>
+            <p style="color: #b0d6ff">&gt;</p>
+          </div>
+        </div>
+
+        <div class="text_content5">
+          <p>
+            As easy as that and you can use various types of animation provided
+            by moov by just calling the above example you can check for more
+            usage examples on the
+            <a href=""><span>website</span></a>
+          </p>
+        </div>
+        <div>
+          <p class="content_heading">Best Practices</p>
+        </div>
+        <div>
+          <p class="text_content">
+            Animation has a great way of calling users' attention to view your
+            website more but it is super important you use animations in places
+            where they are needed. There are some basic rules to follow so you
+            stay on track while using any animation library.
+          </p>
+        </div>
+
+        <div>
+          <p class="content_heading">Good usage of animations</p>
+        </div>
+        <div>
+          <p class="text_content">
+            A component shouldn't be animated merely in order to create
+            animation. Take into consideration that movements ought to be
+            explicit in their intentions. Instead of just adding "flashiness" to
+            your interface, movements including exhibitionists (bounce, blink,
+            etc.) should be utilized to draw the attention of the user to
+            anything exceptional in it. <br /><br />
+            Use exit and entry movements to point out exactly what is occurring
+            in the interaction and make it evident when it is changing states.
+            <br /><br />
+            It really doesn't indicate you shouldn't add some humor to the
+            experience; merely make doubly sure that the audience isn't hindered
+            by movements, but also that their excessive utilization won't slow
+            down the piece's speed. <br /><br />
+          </p>
+        </div>
+
+        <div>
+          <p class="content_heading">Bad usage of animations</p>
+        </div>
+        <div>
+          <ul class="text_content">
+            <li>
+              Resist it considering that it won't be really beneficial to the
+              individual and likely will simply lead to instability.
+              Additionally, there's a significant likelihood that perhaps the
+              movements will be subpar, which will result in a poor user
+              experience.
+            </li>
+            <br />
+            <li>
+              Although it is conceivable, you should refrain from animating the
+              html or body tags. There have been some reports that suggest this
+              can result in strange browser issues. Furthermore, making the
+              entire page bounce wouldn't do much for your user experience. If
+              you actually require this effect, wrap your page with an element
+              and animate it instead.
+            </li>
+            <br />
+            <li>
+              Although utility classes for repeating animations, including an
+              infinite one, are provided by moov.css, you should avoid using
+              them. It will merely divert your users and possibly irritate a
+              sizable portion of them. Use it accordingly.
+            </li>
+            <br />
+            <li>
+              The CSS property animation-fill-mode, which regulates an element's
+              states before and after animation, is a component of every
+              Moov.css animation. Learn more about it by visiting this page. The
+              animation-fill-mode setting in Moov.css is both by default, but
+              you can modify it to meet your specific requirements.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="content_heading">Some usage that can’t be avoided</p>
+        </div>
+        <div>
+          <ul class="text_content">
+            <li>
+              Despite the fact that some browsers support inline animation,
+              doing so violates the CSS animation specifications and will
+              eventually malfunction or stop working on some browsers. Always
+              animate items at the block or inline-block level (grid and flex
+              containers and children are block-level elements too). When
+              animating an inline-level element, you can set the element to
+              display: inline-block.
+            </li>
+            <br />
+            <li>
+              The majority of moov.css animations move elements throughout the
+              screen and may result in scrollbars on your web application. Using
+              the overflow: hidden property, you may control this. The basic
+              principle is to apply it in the parent holding the animated
+              element, but there is no set formula for when and where to use it.
+              You must determine when and how to use it; this guide can assist
+              you do so.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="content_heading">Utility Classes</p>
+        </div>
+        <div>
+          <p class="text_content">
+            A few utility classes are included with Moov.css to make use of it
+            easier.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <p class="content_heading">Delayed Classes</p>
+        </div>
+
+        <div class="text_content">
+          Delays can be added straight to the element's class attribute as shown
+          here:
+        </div>
+        <br />
+        <div class="content_example">
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">div class</p>
+            <p style="color: #007aff">
+              ="moov_animated moov_bounce moov_delay-2s"
+            </p>
+
+            <p style="color: #b0d6ff">&gt;</p>
+            <p style="color: #efefef">Try this</p>
+            <p style="color: #b0d6ff">&lt;</p>
+
+            <p style="color: #b0d6ff">/</p>
+            <p style="color: #fc1100">div</p>
+            <p style="color: #b0d6ff">&gt;</p>
+          </div>
+        </div>
+        <div>
+          <br />
+          <p class="text_content">
+            Moov.css provides different types of delay animations from 1s to 2s
+            etc.
+          </p>
+        </div>
+        <div>
+          <p class="text_content">
+            The delays offer ranges from 1s to 2s. You can alter them by
+            adjusting the moov_delay property’s duration to a longer or shorter
+            time frame.
+          </p>
+        </div>
+        <br /><br />
+        <div class="content_example">
+          <p style="color: #5b5b5b">
+            /* All delay classes will take 2x longer to start */
+          </p>
+          <br />
+          <span>:root</span>
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 1s;</p>
+          <p style="color: #5b5b5b">}</p>
+          <p style="color: #5b5b5b">
+            /* All delay classes will take half the time to start */
+          </p>
+          <span>:root</span>
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 2s;</p>
+          <p style="color: #5b5b5b">}</p>
+        </div>
+
+        <div>
+          <p class="content_heading">
+            Lessons in slow, slower, fast, and faster
+          </p>
+        </div>
+        <div>
+          <p class="text_content">
+            By including these classes, as shown below, you can modify the
+            animation's speed:
+          </p>
+          <br />
+        </div>
+        <div class="content_example">
+          <div style="display: flex">
+            <p style="color: #b0d6ff">&lt;</p>
+            <p style="color: #fc1100">div class</p>
+            <p style="color: #fad1c8">
+              ="moov_animated moov_blink moov_fast-2s"
+            </p>
+
+            <p style="color: #b0d6ff">&gt;</p>
+            <p style="color: #fc8f00">Try this</p>
+            <p style="color: #b0d6ff">&lt;</p>
+
+            <p style="color: #b0d6ff">/</p>
+            <p style="color: #fc1100">div</p>
+            <p style="color: #b0d6ff">&gt;</p>
+          </div>
+        </div>
+        <br />
+        <div>
+          <p class="text_content">
+            Moov.css provides different types of fast, faster, slow, slower,
+            animations from 1s to 2s etc.
+          </p>
+          <br />
+          <p class="text_content">
+            The default speed for the moov_animated class is 1s to 2s.
+            Additionally you can locally or globally alter the animations
+            duration with the - - moov-duration parameter. Both the utility
+            classes and the animation classes will be impacted by this
+          </p>
+        </div>
+        <div>
+          <p class="content_heading">Example:</p>
+        </div>
+        <div class="content_example">
+          <p style="color: #5b5b5b">
+            /* All animations will take twice as long to finish */
+          </p>
+          <br />
+          <span>:root</span>
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 1.2s;</p>
+          <p style="color: #5b5b5b">}</p>
+          <p style="color: #5b5b5b">
+            /* Only this element will take half the time to finish */
+          </p>
+          <span>.my-element </span>
+          <p style="color: #5b5b5b">{</p>
+          <p style="color: #fc8f00">--moov-delay: 800ms;</p>
+          <p style="color: #5b5b5b">}</p>
+        </div>
+        <br />
+        <div>
+          <p class="text_content">
+            Take note that certain animations only last a fraction of a
+            second,using the - -moov-duration property to determine the duration
+            will take these into account. Therefore, all animations will adjust
+            to changes in the global duration.
+          </p>
+        </div>
+        <br />
+        <div>
+          <p class="text_content">Repeating Classes</p>
+          <p class="text_content">
+            By including these classes, as shown below, you can manage how many
+            times the animation is iterated: We have different repeat properties
+            ranging from
+          </p>
+        </div>
+        <br />
+        <div>
+          <div class="text_content6">moov_repeat-1</div>
+          <br />
+          <div class="text_content6">moov_repeat-2</div>
+          <br />
+          <div class="text_content6">moov_repeat-3</div>
+          <br />
+          <div class="text_content6">moov_infinite</div>
+        </div>
+        <br />
+        <div>
+          <p class="text_content">
+            The animation will be repeated twice by the element. In order to
+            avoid a complicated situation, it is best to specify this value
+            locally rather than globally. */ <span> -- repeat-repeat:</span> 2;
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="content_heading">
+          <p class="">CORE TEAM</p>
+        </div>
+        <div class="text_content">
+          <ul>
+            <li>Adesewa Adeboye - Product Design</li>
+            <li>Charles - Product Design</li>
+            <li>Prosper - Product Design</li>
+            <li>Hillz - Product Design</li>
+            <li>Jomex - Product Design</li>
+            <li>Kolavic - Product Design</li>
+            <li>Oluwatosin - Product Design</li>
+            <li>Peace - Product Design</li>
+            <li>Snazzyvee - Product Design</li>
+            <li>Tai_Cee - Product Design</li>
+            <li>Taofiqah - Product Design</li>
+            <li>Tessie - Product Design</li>
+            <li>Adetayo - Fullstack</li>
+            <li>Blessing Garba - Fullstack</li>
+            <li>Darhniel - Fullstack</li>
+            <li>Kenechukwu - Fullstack</li>
+            <li>Okechukwu - Fullstack</li>
+            <li>Oluwatoyin - Fullstack</li>
+            <li>Tallmantek (David)- Fullstack</li>
+            <li>Tams - Fullstack</li>
+            <li>Patrick - Frontend</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact page</title>
+    <link href="{% static 'css/contactus.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/Moov Favicon (White BG).png' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <nav>
+          <img src="{% static 'images/MOOV.png' %}" alt="moov logo" />
+        </nav>
+        <nav>
+          <a>Home</a>
+          <a>Documentation</a>
+          <a class="contact">Contact Us</a>
+        </nav>
+        <nav>
+          <a class="log">Log In</a>
+          <a class="start">Get Started</a>
+        </nav>
+      </div>
+
+      <div class="section">
+        <div>
+          <h3>Need help?</h3>
+          <h3>We are here to help.</h3>
+          <img
+            class="imagetext"
+            src="{% static 'images/undraw_designer_girl_re_h54c 2.png' %}"
+            alt="designer girl"
+          />
+        </div>
+
+        <form method="POST">
+          {% csrf_token %} {% if messages %} {% for message in messages %}
+          {{message}} {% endfor %} {% endif %}
+
+          <p>Contact our profesional team</p>
+          {{moov_app}}
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
