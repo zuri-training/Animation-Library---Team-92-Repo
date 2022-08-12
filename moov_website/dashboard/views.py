@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-@login_required
+@login_required(login_url="/account/login")
 def library_view(request):
     return render(request, 'dashboard/library.html')
 
@@ -19,6 +19,6 @@ def saved_codes(request):
     return render(request, 'dashboard/saved.html')
 
 
-@login_required
+@login_required(login_url="/account/login")
 def download_library(request):
     return render(request, 'dashboard/download.html')
