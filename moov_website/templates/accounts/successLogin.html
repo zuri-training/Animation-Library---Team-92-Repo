@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/Moov Favicon (White BG).png' %}"
+      type="image/x-icon"
+    />
     <script
       src="https://kit.fontawesome.com/6680184395.js"
       crossorigin="anonymous"
@@ -25,8 +30,8 @@
   <body>
     <main>
       <section class="success">
-        <a href="{% url 'home' %}"
-          iid><i class="fa-solid fa-arrow-left">Go back to Homepage</i></a
+        <a href="{% url 'home' %}" iid
+          ><i class="fa-solid fa-arrow-left">Go back to Homepage</i></a
         >
         <img src="{% static 'images/success-icon.svg' %}" alt="success" />
         <h2>Hurray!</h2>
