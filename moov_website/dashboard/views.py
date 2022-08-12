@@ -15,7 +15,7 @@ def library_view(request):
 
 
 @login_required(login_url="/account/login")
-def saved_codes(request):
+def saved_anime(request):
     return render(request, 'dashboard/saved.html')
 
 

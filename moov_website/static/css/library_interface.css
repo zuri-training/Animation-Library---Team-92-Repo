@@ -27,9 +27,21 @@ body{
 .sidebar img{
     display: flex;
     margin: auto;
-    width: 60%;
+    width: 80%;
 }
 
+#username{
+  color:#F9F9F9;
+  font-size:20px;
+  text-transform: capitalize;
+  font-weight: 400;
+  text-align: center;
+  margin-top:5px;
+}
+
+#logout a{
+  color:#F9F9F9
+}
 .side_bar_links{
     margin-top: 4em;
 }

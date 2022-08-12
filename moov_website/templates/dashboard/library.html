@@ -23,16 +23,16 @@
             alt="Default profile picture"
           />
           {% if user.is_authenticated %}
-         <p>{{user.username}}</p>
+         <p id='username'>{{user.username}}</p>
           {% endif %}
           
         </figure>
         <div class="side_bar_links">
           <p><a href="{% url 'library' %} "><b>LIBRARY</b></a></p>
-          <p><a href="{% url 'saved_codes' %} ">SAVED</a></p>
+          <p><a href="{% url 'saved_anime' %} ">SAVED</a></p>
         </div>
         <span>
-          <p><a href="{% url 'logout' %}">LOGOUT</a></p>
+          <p id='logout'><a href="{% url 'logout' %}">LOGOUT</a></p>
         </span>
       </div>
       <div class="main_content">
