@@ -323,31 +323,31 @@
         <p>Copyright &copy; 2022 Design Zuri team. All rights reserved.</p>
       </div>
     </footer>
-  </body>
-  <script>
-    const animations = [
-      "Move_OutUp",
-      "Move_OutDown",
-      "Move_OutRight",
-      "Move_OutLeft",
-      "blink",
-      "bounce",
-      "fade_Out",
-    ];
-    const btns = document.querySelectorAll(".featuredAnimationsBtn");
-    const boxes = document.querySelectorAll(".featuredAnimationsBox > img");
-    btns.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
-        const animation = animations[index],
-          box = boxes[index];
+    <script>
+      const animations = [
+        "Move_OutUp",
+        "Move_OutDown",
+        "Move_OutRight",
+        "Move_OutLeft",
+        "blink",
+        "bounce",
+        "fade_Out",
+      ];
+      const btns = document.querySelectorAll(".featuredAnimationsBtn");
+      const boxes = document.querySelectorAll(".featuredAnimationsBox > img");
+      btns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          const animation = animations[index],
+            box = boxes[index];
 
-        box.classList.toggle(animation);
-        box.classList.toggle("moov_animated");
-        setTimeout(() => {
-          box.classList.toggle("moov_animated");
           box.classList.toggle(animation);
-        }, 2000);
+          box.classList.toggle("moov_animated");
+          setTimeout(() => {
+            box.classList.toggle("moov_animated");
+            box.classList.toggle(animation);
+          }, 2000);
+        });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>
