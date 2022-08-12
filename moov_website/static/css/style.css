@@ -39,6 +39,10 @@ header {
   color: #003773;
 }
 
+
+
+
+
 .hamburger_icon,
 .nav_links_slider {
   display: none;
@@ -101,6 +105,7 @@ header {
 }
 
 .heroSection h1 {
+  margin-top: -2em;
   font-size: 64px;
   padding: 0px 200px;
   margin-bottom: 28px;
