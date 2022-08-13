@@ -1,0 +1,182 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+#left{
+    width: 612px;
+    height: 100vh;
+    margin-left: 96px;
+    background: #002B59;    
+}
+
+#signup_ask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin: auto;
+    margin-top: 50%;
+    width: 393px;
+    height: 208px;
+}
+
+#signup_ask #p1{
+    width: 250px;
+    height: 36px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.0025em;
+    color: #FFFFFF;
+}
+
+#signup_ask #p2{
+    width: 393px;
+    height: 44px;
+    font-family: 'Lato';
+    font-style: normal;
+   padding-top:3px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.0025em;
+    color: #FFFFFF;
+}
+
+#account_create_btn{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    margin-top: 64px;
+    width: 212px;
+    height: 56px;
+    border: 1px solid #E6F2FF;
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.0025em;
+    background: transparent;
+    color: #FFFFFF;
+}
+
+h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.0025em;
+    color: #003773;
+}
+
+#login_area{
+    width: 546px;
+    height: 100%;
+    margin-top: 150px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+#login_area p{
+    width: 546px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.0025em;
+    color: #003773;
+}
+
+form{
+    margin-top: 40px;
+}
+
+label{
+    color: #003773;
+    font-family: 'Lato';
+    font-style: normal;
+}
+
+input[type=email], input[type=password]{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 10px;
+    width: 340px;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #003773;
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type=checkbox]{
+    width: 14px;
+    height: 14px;
+
+    outline: none;
+}
+
+input:hover{
+    outline:1px solid #002B59;
+}
+input[type=submit]{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    padding: 8px 16px;
+    gap: 8px;
+    outline: none;
+    width: 212px;
+    height: 56px;
+    margin-top: 30px;
+    background: #EE6C4D;
+    color: white;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.0025em;
+    border-radius: 4px;
+}
+
+input{
+    border: none;
+    outline: none;
+}
