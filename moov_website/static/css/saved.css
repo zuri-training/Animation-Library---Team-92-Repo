@@ -48,8 +48,17 @@ body{
 
 .side_bar_links p{
     text-align: center;
-    line-height: 2em;
+    line-height: 3em;
+    display: flex;
+    width: 50%;
+    gap: 8px;
+   
 }
+.side_bar_links img{
+  width:30%;
+  
+}
+
 .side_bar_links p a:focus{
     font-weight: 900;
 }

@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static '/moov_animations/library.css/Main_moov/moov.css' %}">
     <link rel="stylesheet" href="{% static '/moov_animations/library.css/moov.min.css' %}">
 
-    <link rel="stylesheet" href=" {% static '/css/library_interface.css' %} " />
+    <link rel="stylesheet" href=" {% static '/css/library.css' %} " />
     <link rel="shortcut icon" href="{% static 'images/Moov Favicon (White BG).png' %}" type="image/x-icon">
     
   </head>
@@ -31,8 +31,8 @@
           
         </figure>
         <div class="side_bar_links">
-          <p><a href="{% url 'dashboard:library' %} "><b>LIBRARY</b></a></p>
-          <p><a href="{% url 'dashboard:saved_anime' %} ">SAVED</a></p>
+          <p> <img src="{% static 'images/bookmark-2.png' %}" class='icon' alt=""> <a href="{% url 'library' %} "><b>LIBRARY</b></a></p>
+          <p> <img src="{% static 'images/home.png' %}"> <a href="{% url 'saved_anime' %} ">SAVED</a></p>
         </div>
         <span>
           <p id='logout'><a href="{% url 'logout' %}">LOGOUT</a></p>
@@ -45,7 +45,7 @@
             <div class="action_type">
                 <h2 class="animation_class">Bounce</h2>
                 
-                <button onclick="myFunction()">BounceIn</button>
+                <button onclick="show1()">BounceIn</button>
                 <button onclick="show2()">BounceInFromBottom</button>
                 <button onclick = "show3()">BounceOut</button>
                 <button onclick = "show4()">BounceOutFromBottom</button>
@@ -80,14 +80,14 @@
         <div class="interface_section">
             <div class="section_links">
                 <a href="{% url 'documentation' %}" id='bordered'> View Documentation</a>
-                <a href="{% url 'dashboard:download' %}" id=colored>Download Library</a>
+                <a href="{% url 'download' %}" id=colored>Download Library</a>
             </div>
             <div class="display_anime">
                 <div id="myDIV">
                   
                 </div>
                
-                <form action="dashboard:saved_anime" method='GET'>
+                <form action="SavedAnimations" method='GET'>
                 
                   <div class="code_display">
                     <input type="text" name="codes" id="display" class="input-field" placeholder='Animation codes will appear here' readonly> 

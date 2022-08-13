@@ -1,6 +1,6 @@
 
 
-function myFunction() {
+function show1() {
   var showContent = document.getElementById("display");
   var element = document.getElementById("myDIV");
   element.classList.toggle("bounce");

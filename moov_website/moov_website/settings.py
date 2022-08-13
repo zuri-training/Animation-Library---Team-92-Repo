@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m##ijx5=(u^mrn#!h7jxoe0vi*cu&!bc%cx3wi7qa(t0(0b=8w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'teekaymartha@gmail.com'
 EMAIL_HOST_PASSWORD = 'whfsresychnqiwwf'
@@ -152,7 +152,6 @@ AUTH_USER_MODEL = 'accounts.NewUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # # Media rootto store images
@@ -166,7 +165,3 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kehindemarthaoluwatoyin@gmail.com'
 EMAIL_HOST_PASSWORD = 'oluwatoyinmartha'
-
-
-
-
