@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,7 +31,7 @@
           
         </figure>
         <div class="side_bar_links">
-          <p> <img src="{% static 'images/bookmark-2.png' %}" class='icon' alt=""> <a href="{% url 'library' %} "><b>LIBRARY</b></a></p>
+          <p> <img src="{% static 'images/bookmark-2.png' %}" class='icon' alt=""> <a href="{% url 'tryout' %} "><b>LIBRARY</b></a></p>
           <p> <img src="{% static 'images/home.png' %}"> <a href="{% url 'saved_anime' %} ">SAVED</a></p>
         </div>
         <span>
@@ -87,7 +87,7 @@
                   
                 </div>
                
-                <form action="SavedAnimations" method='GET'>
+                <form action="savedAnimations" method='GET'>
                 
                   <div class="code_display">
                     <input type="text" name="codes" id="display" class="input-field" placeholder='Animation codes will appear here' readonly> 

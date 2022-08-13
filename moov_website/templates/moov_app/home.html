@@ -18,7 +18,7 @@
       href="{% static 'images/Moov Favicon (White BG).png' %}"
       type="image/x-icon"
     />
-    <link rel="canonical" href="{% url 'home' %}">
+    <link rel="canonical" href="{% url 'home' %}" />
     <link rel="stylesheet" href=" {% static 'css/style.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,7 +46,7 @@
       </div>
       <div class="action_btns">
         {% if user.is_authenticated %}
-        <a href="{% url 'library' %}">
+        <a href="{% url 'tryout' %}">
           <button class="getStartedBtn1">Go to Dashboard</button></a
         >
         <a href="{% url 'logout' %}">
@@ -227,7 +227,7 @@
               enables users work on their animations using their mobile devices.
               Do more work in less time and on the go.
             </p>
-            <a href="{% url 'library' %}">
+            <a href="{% url 'tryout' %}">
               <button class="discoverAnimationsBtn">
                 Discover Animations
               </button></a
