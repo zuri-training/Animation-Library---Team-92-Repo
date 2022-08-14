@@ -3,7 +3,9 @@ from . import views
 
 app_name = 'dashboard'
 urlpatterns = [
-    path('library/', views.library_view, name='library'),
+    path('tryout', views.dashboard, name='tryout'),
+    path('savedAnimations', views.savedAnimations, name="saved_anime"),
     path('download_library', views.download_library, name='download'),
-    path('Saved Animations/', views.saved_anime, name='saved_anime')
+
+
 ]

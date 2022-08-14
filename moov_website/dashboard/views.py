@@ -8,15 +8,16 @@ User = get_user_model()
 
 
 @login_required(login_url="/account/login")
-def library_view(request):
+def dashboard(request):
     return render(request, 'dashboard/library.html')
 
 # saved codes view
 
 
-@login_required(login_url="/account/login")
-def saved_anime(request):
-    return render(request, 'dashboard/saved.html')
+def savedAnimations(request):
+    codes = request.GET['codes']
+    context = {'codes': codes}
+    return render(request, 'dashboard/saved.html', context)
 
 
 @login_required(login_url="/account/login")

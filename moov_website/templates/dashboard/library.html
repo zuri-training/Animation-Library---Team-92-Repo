@@ -5,13 +5,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Moov Dashboard</title>
     <link rel="stylesheet" href="{% static '/moov_animations/library.css/Main_moov/moov.css' %}">
     <link rel="stylesheet" href="{% static '/moov_animations/library.css/moov.min.css' %}">
 
-    <link rel="stylesheet" href=" {% static '/css/library_interface.css' %} " />
+    <link rel="stylesheet" href=" {% static '/css/library.css' %} " />
+    <link rel="shortcut icon" href="{% static 'images/Moov Favicon (White BG).png' %}" type="image/x-icon">
+    
   </head>
 
+ 
   <body>
 
 
@@ -28,8 +31,8 @@
           
         </figure>
         <div class="side_bar_links">
-          <p><a href="{% url 'library' %} "><b>LIBRARY</b></a></p>
-          <p><a href="{% url 'saved_anime' %} ">SAVED</a></p>
+          <p> <img src="{% static 'images/bookmark-2.png' %}" class='icon' alt=""> <a href="{% url 'tryout' %} "><b>LIBRARY</b></a></p>
+          <p> <img src="{% static 'images/home.png' %}"> <a href=" ">SAVED</a></p>
         </div>
         <span>
           <p id='logout'><a href="{% url 'logout' %}">LOGOUT</a></p>
@@ -42,7 +45,7 @@
             <div class="action_type">
                 <h2 class="animation_class">Bounce</h2>
                 
-                <button onclick="myFunction()">BounceIn</button>
+                <button onclick="show1()">BounceIn</button>
                 <button onclick="show2()">BounceInFromBottom</button>
                 <button onclick = "show3()">BounceOut</button>
                 <button onclick = "show4()">BounceOutFromBottom</button>
@@ -57,7 +60,7 @@
                 <button onclick=show8()>Fade-outLeft</button>
               </div>
               <div class="action_type">
-                <h2 class="animation_class">Moov</h2>
+                <h2 class="animation_class">Move</h2>
                 <button onclick=show9()>Move_InLeft</button>
                 <button onclick=show10()>Move_InUp</button>
                 <button onclick=show11()>Move_OutRight</button>
@@ -84,12 +87,12 @@
                   
                 </div>
                
-                <form action="saved" method='POST'>
-                  {% csrf_token %}
+                <form action="savedAnimations" method='GET'>
+                
                   <div class="code_display">
-                    <input type="text" name="codes" id="display" placeholder='Animation codes will appear here' readonly> 
+                    <input type="text" name="codes" id="display" class="input-field" placeholder='Animation codes will appear here' readonly> 
                   <div class="copy">
-                    <img     src=" {% static '/images/Vector.png' %} " alt="copy" class='copyImg'>
+                    <img     src=" {% static '/images/Vector.png' %} " alt="copy" class='copyImg' onclick =myFunction() >
                    </div>
                   </div>
                  

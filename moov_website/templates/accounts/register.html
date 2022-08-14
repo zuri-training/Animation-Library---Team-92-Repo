@@ -31,7 +31,7 @@
           <img src="{% static 'images/Vector (3).png' %}" />
         </div>
         <header>
-          <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+          <a href="{% url 'home' %}"><i class="fa-solid fa-arrow-left"></i></a>
           <img
             src="{% static 'images/Tube_Short_Laying_1__R 3.png' %}"
             class="desktop"
@@ -43,47 +43,43 @@
         <p>Create a free account today</p>
         <form class="form-signin" method="post">
           {% csrf_token %}
+          {% for field in registration_form %}
+          <p>
+          {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+          {% endfor %}
+          </p>
+          {% endfor %}
+          {% if registration_form.non_field_errors %}
+          <div style="color: red">
+            <p>{{registration_form.non_field_errors}}</p>
+          </div>
+        
+          {% endif %}
           <div class="name">
-            <label for="Username">Name</label><br />
-            <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="Username">Email</label><br />
+            <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus class='email'>
         </div
         <div class="email">
-          <label for="Email">Email</label><br>
-          <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required>
+          <label for="Email">Name</label><br>
+          <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required class="firstName">
         </div>
         <div class="password">
           <label for="Password">Password</label><br>
-          <input type="password" name="password1" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="password" name="password1" id="inputPassword" class="form-control" placeholder="Password" required class="password">
         </div>
         <div class="password">
-          <label for="Password">Password</label><br>
-          <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm password" required>
+          <label for="Password">Confirm Password</label><br>
+          <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm password" required class="password">
         </div>
-        {% for field in registration_form %}
-  <p>
-  {% for error in field.errors %}
-  <p style="color: red">{{ error }}</p>
-  {% endfor %}
-  </p>
-  {% endfor %}
-  {% if registration_form.non_field_errors %}
-  <div style="color: red">
-    <p>{{registration_form.non_field_errors}}</p>
-  </div>
+  
 
-  {% endif %}
+ 
 
         <div class="mobile">
           <p>Already have an account? <a href="#">Login</a></p>
         </div>
-        <div class="alt-sign-in">
-          <p>Or sign in with:</p>
-          <div class="other-options">
-            <a href="#"><img src="{% static 'images/Google - jpeg.png' %}"></a>
-            <a href="#"><img src="{% static 'images/XMLID_26_.png' %}"></a>
-            <a href="#"><img src="{% static 'images/Facebook - jpeg.png' %}"></a>
-
-          </div>
+        
           <div class="privacy">
             <input
               type="checkbox"
@@ -110,20 +106,8 @@
             >
           </div>
           <br />
-          {% for field in registration_form %}
-          <p>
-          {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-          {% endfor %}
-          </p>
-          {% endfor %}
-          {% if registration_form.non_field_errors %}
-          <div style="color: red">
-            <p>{{registration_form.non_field_errors}}</p>
-          </div>
-    
-          {% endif %}
-          <input type="submit" value="Create Account" />
+          
+          <input type="submit" value="Create Account" id='btn' />
           <img
             src="{% static 'images/Tube_Short_Laying_1__R 4.png' %}"
             class="desktop"
@@ -138,5 +122,6 @@
         <a href="{% url 'login'%}">Sign In</a>
       </section>
     </main>
+    <script src="{% static 'js/register.js' %}"></script>
   </body>
 </html>

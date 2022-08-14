@@ -5,7 +5,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" Moov is a platform with the toolset that allows you to create, edit,
+    test, and display animations, Create personalised libraries and be
+    your own animation champion."
+    />
     <title>Welcome to MOOV</title>
+
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/Moov Favicon (White BG).png' %}"
+      type="image/x-icon"
+    />
+    <link rel="canonical" href="{% url 'home' %}" />
     <link rel="stylesheet" href=" {% static 'css/style.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,14 +39,14 @@
       </div>
       <div class="actionLinks">
         <p>
-          <a href=""><b>Home</b></a>
+          <a href="{% url 'home' %}"><b>Home</b></a>
         </p>
         <p><a href="{% url 'documentation'%}">Documentation</a></p>
         <p><a href="{% url 'contact' %}">Contact Us</a></p>
       </div>
       <div class="action_btns">
         {% if user.is_authenticated %}
-        <a href="{% url 'library' %}">
+        <a href="{% url 'tryout' %}">
           <button class="getStartedBtn1">Go to Dashboard</button></a
         >
         <a href="{% url 'logout' %}">
@@ -48,16 +61,17 @@
         >
         {% endif %}
       </div>
-      <label for="hamburger" class="hamburger_icon">
+      <label class="hamburger_icon">
         <input type="checkbox" id="hamburger" hidden class="hamburger_input" />
-        <label class="hamburger_icon_bars">
-          <div class="hamburger_icon_bar"></div>
-          <div class="hamburger_icon_bar"></div>
-          <div class="hamburger_icon_bar"></div>
-        </label>
         <div class="nav_links_slider">
           <label for="hamburger">x </label>
-          <a href=""
+          <a href="{% url 'home' %}"
+            ><p><b>Home</b></p></a
+          >
+          <label for="hamburger"
+            ><img src="{% static 'images/assets/icons8-close.svg' %}" alt="" />
+          </label>
+          <a href="{% url 'home' %}"
             ><p><b>Home</b></p></a
           >
           <p>Documentation</p>
@@ -65,6 +79,11 @@
           <button class="logIn_btn">Log In</button>
           <button class="getStartedBtn1">Get Started</button>
         </div>
+        <label for="hamburger" class="hamburger_icon_bars">
+          <div class="hamburger_icon_bar"></div>
+          <div class="hamburger_icon_bar"></div>
+          <div class="hamburger_icon_bar"></div>
+        </label>
       </label>
     </header>
     <main>
@@ -77,13 +96,18 @@
               class="bounce"
             />
           </div>
-          <h1>Moov; making animation simple and easy to use</h1>
+          <h1>
+            <span class="flip_In_180">Moov</span>; making animation simple and
+            easy to use.
+          </h1>
           <p>
             Moov is a platform with the toolset that allows you to create, edit,
             test, and display animations, Create personalised libraries and be
             your own animation champion.
           </p>
-          <button class="getStartedBtn2">Get Started</button>
+          <a href="{% url 'register' %}">
+            <button class="getStartedBtn2">Get Started</button></a
+          >
         </div>
       </section>
       <h3 class="featuredAnimationsText p-wrapper">Featured animations</h3>
@@ -177,18 +201,20 @@
               Explore a large pool of ready-to-use animations and create
               amazing, fun animations for your brand and project.
             </p>
-            <button class="getStartedBtn3">Get Started</button>
+            <a href="{% url 'register' %}">
+              <button class="getStartedBtn3">Get Started</button></a
+            >
           </div>
           <div class="imgSection">
             <img
-              src="{% static 'images/assets/Background - section 1 (1).png' %}"
+              src="{% static 'images/assets/Background - Section 1 (1).png' %}"
             />
           </div>
         </div>
         <div class="secondRow">
           <div class="imgSection2">
             <img
-              src="{% static 'images/assets/Background - section 2 (1).png' %}"
+              src="{% static 'images/assets/Background - Section 2 (1).png' %}"
             />
           </div>
           <div class="textSection2">
@@ -201,7 +227,11 @@
               enables users work on their animations using their mobile devices.
               Do more work in less time and on the go.
             </p>
-            <button class="discoverAnimationsBtn">Discover Animations</button>
+            <a href="{% url 'tryout' %}">
+              <button class="discoverAnimationsBtn">
+                Discover Animations
+              </button></a
+            >
           </div>
         </div>
         <div class="thirdRow">
@@ -215,11 +245,19 @@
               that allows you explore, like, save & download your <br />
               animations
             </p>
-            <button class="signUpBtn">Sign Up</button>
+            {% if user.is_unauthenticated %}
+            <a href="{% url 'register' %}"
+              ><button class="signUpBtn">Sign Up</button></a
+            >
+            {% else %}
+            <a href="{% url 'tryout' %}"
+              ><button class="signUpBtn">View</button></a
+            >
+            {% endif %}
           </div>
           <div class="imgSection3">
             <img
-              src="{% static 'images/assets/Background - section 3 (1).png' %}"
+              src="{% static 'images/assets/Background - Section 3 (1).png' %}"
               alt=""
             />
           </div>
@@ -277,7 +315,9 @@
               View and interact with our documentation <br />
               before giving Moov a try
             </p>
-            <button class="documentationBtn">View Documentation</button>
+            <a href="{% url 'documentation'%}"
+              ><button class="documentationBtn">View Documentation</button></a
+            >
           </div>
           <div class="moreDetailsImg">
             <img
@@ -327,11 +367,11 @@
         <div class="footer_right_section flex">
           <div><a href="#">Contact Us</a></div>
           <div>
-            <a href="{url 'documentation'}">Documentation</a>
+            <a href="{% url 'documentation'%}">Documentation</a>
             <a href="#">Tutorial Videos</a>
           </div>
           <div>
-            <a href="">Privacy Policy</a>
+            <a href="{% url 'privacy' %}">Privacy Policy</a>
             <a href="{% url  't&c' %}">Terms and Conditions</a>
           </div>
         </div>
@@ -341,4 +381,30 @@
       </div>
     </footer>
   </body>
+  <script>
+    const animations = [
+      "Move_OutUp",
+      "Move_OutDown",
+      "Move_OutRight",
+      "Move_OutLeft",
+      "blink",
+      "bounce",
+      "fade_Out",
+    ];
+    const btns = document.querySelectorAll(".featuredAnimationsBtn");
+    const boxes = document.querySelectorAll(".featuredAnimationsBox > img");
+    btns.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        const animation = animations[index],
+          box = boxes[index];
+
+        box.classList.toggle(animation);
+        box.classList.toggle("moov_animated");
+        setTimeout(() => {
+          box.classList.toggle("moov_animated");
+          box.classList.toggle(animation);
+        }, 2000);
+      });
+    });
+  </script>
 </html>
