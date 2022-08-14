@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href=" {% static '/css/saved_style.css' %} " />
+    <link rel="stylesheet" href=" {% static '/css/saved.css' %} " />
   </head>
   <style>
-    .addCSS{
-      color: red;
-      border-radius: 50%;
-  }
+    .code{
+      background-color:#
+      padding:2em;
+      color:#f5f5f5
+    }
   </style>
   <body>
     <div class="wrapper">
@@ -24,8 +25,8 @@
           />
         </figure>
         <div class="side_bar_links">
-          <p><a href="{% url 'dashboard:library' %} "  class='libLnk'>LIBRARY</a></p>
-          <p><a href=" " class='saveLnk'><b>SAVED</b></a></p>
+          <p> <img src="{% static 'images/bookmark-2.png' %}" class='icon' alt=""> <a href="{% url 'tryout' %} ">LIBRARY</a></p>
+          <p> <img src="{% static 'images/home.png' %}"> <a href=" "><b>SAVED</b></a></p>
         </div>
         <span>
           <p><a href="logout">LOGOUT</a></p>
@@ -35,7 +36,7 @@
             <h2 class="code_header">
                 Saved Animations
             </h2>
-            {{codes}}
+            <div class="code">{{codes}}</div>
         </div>
       </div>
     </div>

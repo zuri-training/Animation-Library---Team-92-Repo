@@ -36,4 +36,4 @@ urlpatterns = [
 
 # 404 error setup
 
-# handler404 = 'moov_app.views.error_404'
+handler404 = 'moov_app.views.error_404'

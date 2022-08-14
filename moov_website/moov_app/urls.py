@@ -1,6 +1,7 @@
 from . import views
 from django.urls import path, include
 
+app_name = 'moov_app'
 urlpatterns = [
     path('', views.homepage, name='home'),
     path('error/', views.errorPage, name="error"),

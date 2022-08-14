@@ -18,6 +18,10 @@ HTML STRUCTURE:
     </div>
 
 </div>
+
+## Example
+
+This basic code is to apply a bouceIn animation:
 Example
 This basic code is to appply a bouceIn animation:
 
@@ -32,30 +36,10 @@ If you want to contribute to this project,a pull request is the way to go and ma
 
 You can view more about the Moov documentation on the website
 
-uncompleted
-Web App Features
-Authenticated User:
+#How to work with repo locally:
+1) clone the repository
+2) cd to moov_website
 
-1.Full access to the platform
-
-2. Allow users download library
-3. Allows users embed in their code (either by import, embed, or package manager installation)
-4. The Library should allow certain animations like - move_up, move_down, move_left, blink, bounce and fade (you can add more)
-5. Show usage example to users
-6. Give interactive interface to generate the right combination of code to use
-7. Interactive Documentation
-8. Allow user save data and come back to download
-   uncompleted
-   Unauthenticated User:
-
-9. Visit the platform to view basic information about it
-10. View and Interact with the documentation
-11. Register to view more details
-12. No access to use until registered
-    uncompleted
-    Moov is an open source library that allows beginners to perform basic web animation using everyday language, the Moov library allows users to add animations to websites.
-
-Installation and Usage
 
 Download from here
 
@@ -69,12 +53,8 @@ Or add it directly to your webpage using a CDN:
 
 Basic usage After adding or embedding the moov.css library to your code, Always ensure before calling your animation name you include “moov_animated” then the animation name.
 
-Example This basic code is to apply a bouceIn animation:
 
-As easy as that and you can use various types of animation provided by moov by just calling the above example
-you can check for more usage examples on the website
-
-Best Practices
+# Best Practices
 
 Animation has a great way of calling users' attention to view your website more but it is super important you use animations in places where they are needed. There are some basic rules to follow so you stay on track while using any animation library.
 
@@ -82,19 +62,18 @@ Good usage of animations A component shouldn't be animated merely in order to cr
 
 Use exit and entry movements to point out exactly what is occurring in the interaction and make it evident when it is changing states.
 
-It really doesn't indicate you shouldn't add some humor to the experience; merely make doubly sure that the audience isn't hindered by movements, but also that their excessive utilization won't slow down the piece's speed.
 
-Bad usage of animations Resist it considering that it won't be really beneficial to the individual and likely will simply lead to instability. Additionally, there's a significant likelihood that perhaps the movements will be subpar, which will result in a poor user experience.
-
-Although it is conceivable, you should refrain from animating the html or body tags. There have been some reports that suggest this can result in strange browser issues. Furthermore, making the entire page bounce wouldn't do much for your user experience. If you actually require this effect, wrap your page with an element and animate it instead.
-
-Although utility classes for repeating animations, including an infinite one, are provided by moov.css, you should avoid using them. It will merely divert your users and possibly irritate a sizable portion of them. Use it accordingly.
 
 The CSS property animation-fill-mode, which regulates an element's states before and after animation, is a component of every Moov.css animation. Learn more about it by visiting this page. The animation-fill-mode setting in Moov.css is both by default, but you can modify it to meet your specific requirements.
 
-Some usage that can’t be avoided Despite the fact that some browsers support inline animation, doing so violates the CSS animation specifications and will eventually malfunction or stop working on some browsers. Always animate items at the block or inline-block level (grid and flex containers and children are block-level elements too). When animating an inline-level element, you can set the element to display: inline-block. The majority of Animate.css animations move elements throughout the screen and may result in scrollbars on your web application. Using the overflow: hidden property, you may control this. The basic principle is to apply it in the parent holding the animated element, but there is no set formula for when and where to use it. You must determine when and how to use it; this guide can assist you do so.
+# Some usage that can’t be avoided
 
-    Utility Classes
+Despite the fact that some browsers support inline animation, doing so violates the CSS animation specifications and will eventually malfunction or stop working on some browsers. Always animate items at the block or inline-block level (grid and flex containers and children are block-level elements too). When animating an inline-level element, you can set the element to display: inline-block.
+
+
+
+
+  #   Utility Classes
 
 A few utility classes are included with Moov.css to make use of it easier.
 

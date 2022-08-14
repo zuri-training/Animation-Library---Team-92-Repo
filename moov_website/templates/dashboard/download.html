@@ -5,8 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href=" {% static '/css/saved_style.css' %} " />
+    <title>Download Library</title>
+    <link
+    rel="shortcut icon"
+    href="{% static 'images/Moov Favicon (White BG).png' %}"
+    type="image/x-icon"
+  />
+    <link rel="stylesheet" href=" {% static '/css/saved.css' %} " />
     <link rel="stylesheet" href=" {% static '/css/download.css' %} " />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,700;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link
@@ -34,8 +39,8 @@
           />
         </figure>
         <div class="side_bar_links">
-          <p><a href="{% url 'library' %} "  class='libLnk'>LIBRARY</a></p>
-          <p><a href="{% url 'saved_codes' %} " class='saveLnk'>SAVED</a></p>
+          <p><a href="{% url 'tryout' %} "  class='libLnk'>LIBRARY</a></p>
+          <p><a href="{% url 'saved_anime' %} " class='saveLnk'>SAVED</a></p>
         </div>
         <span>
           <p><a href="logout">LOGOUT</a></p>
@@ -54,7 +59,7 @@
                        <!-- text field -->
         
                         <div class="field">
-                            <input class="input-field" value="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" type="text" name="text" id="text" readonly>
+                            <input class="input-field" value="coming soon" type="text" name="text" id="text" readonly>
                         <i onclick="myFunction()" class="fa-regular fa-copy icon "><br> <span onclick="myFunction()"  class="copy" >copy</span></i>
                         </div>
                          <div class="flex-moov">
