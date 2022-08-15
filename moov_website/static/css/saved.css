@@ -23,6 +23,13 @@ body{
     width:25%;
     padding: 3em;
 }
+.code{
+    background-color:#003773;
+    padding:2em;
+    color:#f5f5f5;
+    width: 40%;
+    margin-top: 2em;
+  }
 
 .sidebar img{
     display: flex;
