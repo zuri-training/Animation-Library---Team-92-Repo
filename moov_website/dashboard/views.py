@@ -16,8 +16,8 @@ def dashboard(request):
 
 def savedAnimations(request):
     codes = request.GET['codes']
-
-    return render(request, 'dashboard/saved.html', {'codes': codes})
+    context = {'codes': codes}
+    return render(request, 'dashboard/saved.html', context)
 
 
 @login_required(login_url="/account/login")

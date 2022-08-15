@@ -315,7 +315,9 @@
               View and interact with our documentation <br />
               before giving Moov a try
             </p>
-            <button class="documentationBtn">View Documentation</button>
+            <a href="{% url 'documentation'%}"
+              ><button class="documentationBtn">View Documentation</button></a
+            >
           </div>
           <div class="moreDetailsImg">
             <img
@@ -365,7 +367,7 @@
         <div class="footer_right_section flex">
           <div><a href="#">Contact Us</a></div>
           <div>
-            <a href="{url 'documentation'}">Documentation</a>
+            <a href="{% url 'documentation'%}">Documentation</a>
             <a href="#">Tutorial Videos</a>
           </div>
           <div>
