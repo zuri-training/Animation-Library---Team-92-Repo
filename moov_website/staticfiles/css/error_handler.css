@@ -17,6 +17,7 @@
 }
 
 #error_img{
+    
     width: 478px;
     height: 316px;
 }
@@ -43,6 +44,7 @@ p{
     height: 56px;
     background: #EE6C4D;
     border-radius: 4px;
+    outline: none;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
