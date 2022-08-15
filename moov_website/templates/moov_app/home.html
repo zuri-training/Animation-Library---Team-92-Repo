@@ -197,9 +197,16 @@
               Explore a large pool of ready-to-use animations and create
               amazing, fun animations for your brand and project.
             </p>
+            {% if user.is_authenticated %}
+            <a href="{% url 'register' %}">
+              <button class="getStartedBtn3">View Collections</button></a
+            >
+            {% else %}
+
             <a href="{% url 'register' %}">
               <button class="getStartedBtn3">Get Started</button></a
             >
+            {% endif %}
           </div>
           <div class="imgSection">
             <img
