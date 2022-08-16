@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-m##ijx5=(u^mrn#!h7jxoe0vi*cu&!bc%cx3wi7qa(t0(0b=8w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["moov.heroku.com"]
+ALLOWED_HOSTS = ["moov-zurifordummies.herokuapp.com", '127.0.0.1:8000/']
 
 
 # Application definition
@@ -83,12 +83,12 @@ WSGI_APPLICATION = 'moov_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "d6kb9kha51cf37",
-        'USER': "gpkhzbhkapyzar",
-        'PASSWORD': "2dfcde6bf8a38a0bcd742517685e72723f45188ed32844884e2076c51c786ae7",
-        'Host': "ec2-34-203-182-65.compute-1.amazonaws.com",
-        'port': "5432",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd6kb9kha51cf37',
+        'USER': 'gpkhzbhkapyzar',
+        'PASSWORD': '2dfcde6bf8a38a0bcd742517685e72723f45188ed32844884e2076c51c786ae7',
+        'HOST': 'ec2-34-203-182-65.compute-1.amazonaws.com',
+        'port': '5432',
 
     }
 }
@@ -149,8 +149,6 @@ MEDIA_URL = 'images/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-
-django_heroku.settings(locals())
 # register custom user model
 AUTH_USER_MODEL = 'accounts.NewUser'
 
@@ -174,6 +172,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kehindemarthaoluwatoyin@gmail.com'
 EMAIL_HOST_PASSWORD = 'oluwatoyinmartha'
 
+django_heroku.settings(locals())
 
 # whitenoise compress
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
