@@ -83,12 +83,12 @@ WSGI_APPLICATION = 'moov_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6kb9kha51cf37',
-        'USER': 'gpkhzbhkapyzar',
-        'PASSWORD': '2dfcde6bf8a38a0bcd742517685e72723f45188ed32844884e2076c51c786ae7',
-        'Host': 'ec2-34-203-182-65.compute-1.amazonaws.com',
-        'port': 5432,
+        'ENGINE': "django.db.backends.postgresql",
+        'NAME': "d6kb9kha51cf37",
+        'USER': "gpkhzbhkapyzar",
+        'PASSWORD': "2dfcde6bf8a38a0bcd742517685e72723f45188ed32844884e2076c51c786ae7",
+        'Host': "ec2-34-203-182-65.compute-1.amazonaws.com",
+        'port': "5432",
 
     }
 }
