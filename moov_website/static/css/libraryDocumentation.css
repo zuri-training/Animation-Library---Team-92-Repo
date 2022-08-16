@@ -1,5 +1,5 @@
 /* Google font  */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
 
 /* ------------------------------------------------ GLOBAL STYLING ----------------------------------------------- */
 
@@ -38,7 +38,7 @@ body {
   max-width: 1440px;
   background-color: var(--body-background);
   padding: 0.9rem 2rem;
-  font-family: 'Lato', sans-serif;;
+  font-family: "Lato", sans-serif;
   /* width: 100%; */
 }
 .header {
@@ -94,31 +94,28 @@ body {
 }
 
 /* New section link code */
-.section_links{
+.section_links {
   display: flex;
   justify-content: flex-end;
-  gap:1em;
+  gap: 1em;
 }
-.section_links a{
+.section_links a {
   text-decoration: none;
   padding: 1em 3em;
-  
-  ;
+
   border-radius: 4px;
   font-weight: 900;
-  color:black;
-
-
+  color: black;
 }
 
-#bordered{
+#bordered {
   background-color: none;
   border: 2px solid #003773;
-  color:#003773;
+  color: #003773;
 }
-#colored{
-  background-color: #EE6C4D;
-  color:#F9F9F9;
+#colored {
+  background-color: #ee6c4d;
+  color: #f9f9f9;
 }
 
 h3 {

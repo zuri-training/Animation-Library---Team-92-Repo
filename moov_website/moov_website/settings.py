@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m##ijx5=(u^mrn#!h7jxoe0vi*cu&!bc%cx3wi7qa(t0(0b=8w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["moov-zurifordummies.herokuapp.com", '127.0.0.1:8000/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -172,7 +171,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kehindemarthaoluwatoyin@gmail.com'
 EMAIL_HOST_PASSWORD = 'oluwatoyinmartha'
 
-django_heroku.settings(locals())
+
 
 # whitenoise compress
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"

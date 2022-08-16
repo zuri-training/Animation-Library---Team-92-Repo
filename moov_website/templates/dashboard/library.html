@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href=" {% static '/css/library.css' %} " />
     <link rel="shortcut icon" href="{% static 'images/Moov Favicon (White BG).png' %}" type="image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/6680184395.js"
+      crossorigin="anonymous"
+    ></script>
     
   </head>
 
@@ -20,6 +24,7 @@
 
     <div class="wrapper">
       <div class="sidebar">
+        
         <figure>
           <img
             src=" {% static '/images/profile_pic.png' %} "
@@ -31,8 +36,9 @@
           
         </figure>
         <div class="side_bar_links">
+          <a href="{% url 'home' %}" style="color:#f5f5f5 ;margin-bottom: 2rem;font-size: 18px;font-weight: 900;"><i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i>HOME</a>
           <p> <img src="{% static 'images/bookmark-2.png' %}" class='icon' alt=""> <a href="{% url 'tryout' %} "><b>LIBRARY</b></a></p>
-          <p> <img src="{% static 'images/home.png' %}"> <a href=" ">SAVED</a></p>
+          <p> <img src="{% static 'images/home.png' %}"> <a href="{% url 'saved_anime' %} ">SAVED</a></p>
         </div>
         <span>
           <p id='logout'><a href="{% url 'logout' %}">LOGOUT</a></p>

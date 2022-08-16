@@ -24,13 +24,13 @@
           <img src="{% static 'images/MOOV.png' %}" alt="moov logo" />
         </nav>
         <nav>
-          <a>Home</a>
-          <a>Documentation</a>
-          <a class="contact">Contact Us</a>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'documentation' %}">Documentation</a>
+          <a href="{% url 'contact' %}" class="contact">Contact Us</a>
         </nav>
         <nav>
-          <a class="log">Log In</a>
-          <a class="start">Get Started</a>
+          <a href="{% url 'login' %}" class="log">Log In</a>
+          <a href="{% url 'register' %}" class="start">Get Started</a>
         </nav>
       </div>
 
