@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'moov_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': "django.db.backends.postgresql",
+        'ENGINE': "django.db.backends.postgresql_psycopg2",
         'NAME': "d6kb9kha51cf37",
         'USER': "gpkhzbhkapyzar",
         'PASSWORD': "2dfcde6bf8a38a0bcd742517685e72723f45188ed32844884e2076c51c786ae7",
